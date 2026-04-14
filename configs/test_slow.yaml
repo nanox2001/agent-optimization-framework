@@ -1,0 +1,6 @@
+scenario: long_task
+target: slow_test
+parameters:
+  simulate_delay: 10
+  steps: 5
+test_mode: true

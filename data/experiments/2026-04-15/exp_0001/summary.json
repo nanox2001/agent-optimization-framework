@@ -1,0 +1,18 @@
+{
+    "experiment_id": "exp_0001",
+    "variant_id": "v_integration_test",
+    "scenario": "web_scrape",
+    "phase": "phase3",
+    "status": "completed",
+    "duration_sec": .001619832,
+    "timestamp": "2026-04-14T21:27:41Z",
+    "config_hash": "8a67ed80",
+    "git_commit": "5f46e602d380905c0292b22981e9857f4a6c56bb",
+    "exit_code": 0,
+    "output_files": {
+        "stdout": "stdout.log",
+        "stderr": "stderr.log",
+        "config": "config.yaml",
+        "summary": "summary.json"
+    }
+}

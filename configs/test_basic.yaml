@@ -1,0 +1,6 @@
+scenario: web_scrape
+target: test
+parameters:
+  timeout: 10
+  retries: 1
+test_mode: true
