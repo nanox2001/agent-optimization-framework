@@ -1,0 +1,139 @@
+{
+  "version": "1.0",
+  "description": "场景→工具映射配置 - Phase 3 实验优化结果",
+  "strategies": {
+    "static": {
+      "description": "静态HTML页面，无JS渲染需求",
+      "primary_tool": "web_fetch",
+      "fallback_tools": ["browser"],
+      "indicators": {
+        "url_patterns": ["*.html", "*/blog/*", "*/article/*"],
+        "content_hints": ["server-rendered", "static site"]
+      },
+      "expected_success_rate": 0.95,
+      "timeout_ms": 15000
+    },
+    "anti_scrape": {
+      "description": "有反爬机制的网站，需要真实浏览器环境",
+      "primary_tool": "browser",
+      "fallback_tools": [],
+      "indicators": {
+        "domains": ["medium.com", "reddit.com", "linkedin.com", "twitter.com", "x.com"],
+        "response_codes": [403, 429]
+      },
+      "expected_success_rate": 0.85,
+      "timeout_ms": 45000,
+      "browser_options": {
+        "wait_until": "networkidle",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/120.0.0.0"
+      }
+    },
+    "platform": {
+      "description": "社交媒体/内容平台的特定数据",
+      "primary_tool": "opencli",
+      "fallback_tools": ["browser"],
+      "indicators": {
+        "platforms": {
+          "bilibili": {"cmd": "opencli bilibili hot --limit {limit} -f json"},
+          "zhihu": {"cmd": "opencli zhihu hot -f json"},
+          "weibo": {"cmd": "opencli weibo hot -f json"},
+          "xiaohongshu": {"cmd": "opencli xiaohongshu hot -f json"}
+        }
+      },
+      "expected_success_rate": 0.80,
+      "timeout_ms": 30000
+    },
+    "spa": {
+      "description": "单页应用，需要JS执行",
+      "primary_tool": "browser",
+      "fallback_tools": ["web_fetch"],
+      "indicators": {
+        "framework_hints": ["React", "Vue", "Angular", "Next.js"],
+        "url_patterns": ["*.netlify.app", "*.vercel.app", "app.*"],
+        "ssr_detection": {
+          "enabled": true,
+          "check_empty_root": true,
+          "fallback_on_content": true
+        }
+      },
+      "expected_success_rate": 0.70,
+      "timeout_ms": 45000,
+      "browser_options": {
+        "wait_until": "networkidle",
+        "min_content_length": 500
+      }
+    },
+    "search": {
+      "description": "搜索查询场景",
+      "primary_tool": "search",
+      "fallback_tools": ["browser"],
+      "indicators": {
+        "query_prefixes": ["search:", "find:", "lookup:"]
+      },
+      "fallback_url_template": "https://www.google.com/search?q={query}",
+      "expected_success_rate": 0.90,
+      "timeout_ms": 30000
+    },
+    "realtime": {
+      "description": "实时数据/动态内容",
+      "primary_tool": "web_fetch",
+      "fallback_tools": ["opencli"],
+      "indicators": {
+        "api_patterns": ["wttr.in", "api.github.com", "api.*"],
+        "data_types": ["weather", "stock", "status"]
+      },
+      "expected_success_rate": 0.90,
+      "timeout_ms": 10000,
+      "cache_policy": "no-cache"
+    }
+  },
+  "tool_configurations": {
+    "web_fetch": {
+      "type": "python",
+      "module": "requests",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (compatible; AgentBot/1.0)"
+      },
+      "retry_count": 2,
+      "retry_delay_ms": 1000
+    },
+    "browser": {
+      "type": "cli",
+      "command": "agent-browser",
+      "session_prefix": "auto_{timestamp}",
+      "cleanup_on_error": true,
+      "required_env": {
+        "socket_dir": "AGENT_BROWSER_SOCKET_DIR"
+      }
+    },
+    "opencli": {
+      "type": "cli",
+      "command": "opencli",
+      "requires_node": true,
+      "min_version": "18.0.0"
+    },
+    "search": {
+      "type": "python",
+      "script": "/home/jerry/.openclaw/workspace/skills/search-suite/scripts/search.py",
+      "engines": ["tavily", "serper"],
+      "fallback_order": ["tavily", "serper", "ddg"]
+    }
+  },
+  "execution_policy": {
+    "max_total_timeout_ms": 120000,
+    "parallel_execution": false,
+    "tool_chain_delay_ms": 2000,
+    "on_failure": "try_fallback",
+    "failure_logging": true
+  },
+  "optimization_notes": {
+    "from_round2": [
+      "browser工具需要可写的socket目录，sandbox环境受限",
+      "react.dev等现代SPA可通过SSR检测用web_fetch获取",
+      "opencli依赖Node环境，需提前验证",
+      "search API需要修复JSON输出格式"
+    ],
+    "target_success_rate": 0.75,
+    "current_limitations": ["sandbox_socket", "missing_node", "search_api_format"]
+  }
+}

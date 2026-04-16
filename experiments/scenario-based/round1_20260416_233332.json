@@ -1,0 +1,211 @@
+[
+  {
+    "test_id": "S1_001",
+    "scenario": "static",
+    "url": "https://dbreunig.com/2026/04/14/cybersecurity-is-proof-of-work-now.html",
+    "timestamp": "2026-04-16T23:32:39.280503",
+    "expected_tool": "web_fetch",
+    "tool_sequence": [
+      {
+        "success": true,
+        "duration_ms": 1674.88694190979,
+        "status_code": 200,
+        "content_length": 12382,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "primary_tool_success": true,
+    "fallback_triggered": false,
+    "final_success": true
+  },
+  {
+    "test_id": "S1_002",
+    "scenario": "static",
+    "url": "https://theleo.zone/posts/pager/",
+    "timestamp": "2026-04-16T23:32:41.956304",
+    "expected_tool": "web_fetch",
+    "tool_sequence": [
+      {
+        "success": true,
+        "duration_ms": 109.15040969848633,
+        "status_code": 200,
+        "content_length": 32378,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "primary_tool_success": true,
+    "fallback_triggered": false,
+    "final_success": true
+  },
+  {
+    "test_id": "S2_001",
+    "scenario": "anti_scrape",
+    "url": "https://medium.com/@anthropics/mythos-security-assessment",
+    "timestamp": "2026-04-16T23:32:43.067320",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url https://medium.com/@anthropics/mythos-security-assessment --snapshot",
+        "tool": "browser"
+      },
+      {
+        "success": false,
+        "duration_ms": 131.65712356567383,
+        "status_code": 403,
+        "content_length": 0,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S2_002",
+    "scenario": "anti_scrape",
+    "url": "https://www.reddit.com/r/MachineLearning/",
+    "timestamp": "2026-04-16T23:32:44.200171",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url https://www.reddit.com/r/MachineLearning/ --snapshot",
+        "tool": "browser"
+      },
+      {
+        "success": false,
+        "duration_ms": 133.81171226501465,
+        "status_code": 403,
+        "content_length": 0,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S3_001",
+    "scenario": "platform",
+    "url": "bilibili hot",
+    "timestamp": "2026-04-16T23:32:45.335343",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": true,
+        "duration_ms": 16673.247814178467,
+        "output_length": 622,
+        "error": null,
+        "notes": "opencli CLI执行",
+        "tool": "opencli"
+      }
+    ],
+    "primary_tool_success": true,
+    "fallback_triggered": false,
+    "final_success": true
+  },
+  {
+    "test_id": "S3_002",
+    "scenario": "platform",
+    "url": "zhihu hot",
+    "timestamp": "2026-04-16T23:33:03.009816",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 9046.38147354126,
+        "output_length": 3,
+        "error": null,
+        "notes": "opencli CLI执行",
+        "tool": "opencli"
+      },
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url zhihu hot --snapshot",
+        "tool": "browser"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S4_001",
+    "scenario": "spa",
+    "url": "https://spa-react-example.netlify.app",
+    "timestamp": "2026-04-16T23:33:13.057322",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url https://spa-react-example.netlify.app --snapshot",
+        "tool": "browser"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S5_001",
+    "scenario": "search",
+    "url": "search: AI agents",
+    "timestamp": "2026-04-16T23:33:14.058508",
+    "expected_tool": "search",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 2560.7199668884277,
+        "error": "Parse failed",
+        "raw": "搜索: what are AI agents\n\n引擎: tavily\n消耗: 1 credits\n\n📝 答案:\nAI agents are autonomous software systems that perform tasks, make decisions, and interact intelligently with their environment to achieve speci",
+        "tool": "search"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S6_001",
+    "scenario": "realtime",
+    "url": "https://wttr.in/Sydney?format=j1",
+    "timestamp": "2026-04-16T23:33:17.620297",
+    "expected_tool": "web_fetch",
+    "tool_sequence": [
+      {
+        "success": true,
+        "duration_ms": 1324.3012428283691,
+        "status_code": 200,
+        "content_length": 39505,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "primary_tool_success": true,
+    "fallback_triggered": false,
+    "final_success": true
+  },
+  {
+    "test_id": "S6_002",
+    "scenario": "realtime",
+    "url": "weibo hot",
+    "timestamp": "2026-04-16T23:33:19.945276",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": true,
+        "duration_ms": 11461.354970932007,
+        "output_length": 7065,
+        "error": null,
+        "notes": "opencli CLI执行",
+        "tool": "opencli"
+      }
+    ],
+    "primary_tool_success": true,
+    "fallback_triggered": false,
+    "final_success": true
+  }
+]

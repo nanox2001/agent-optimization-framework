@@ -1,0 +1,204 @@
+[
+  {
+    "test_id": "S1_001",
+    "scenario": "static",
+    "url": "https://dbreunig.com/2026/04/14/cybersecurity-is-proof-of-work-now.html",
+    "timestamp": "2026-04-16T23:13:27.711108",
+    "expected_tool": "web_fetch",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 1972.4137783050537,
+        "error": "Parse failed",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S1_002",
+    "scenario": "static",
+    "url": "https://theleo.zone/posts/pager/",
+    "timestamp": "2026-04-16T23:13:30.684418",
+    "expected_tool": "web_fetch",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 1793.0819988250732,
+        "error": "Parse failed",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S2_001",
+    "scenario": "anti_scrape",
+    "url": "https://medium.com/@anthropics/mythos-security-assessment",
+    "timestamp": "2026-04-16T23:13:33.478688",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url https://medium.com/@anthropics/mythos-security-assessment --snapshot",
+        "tool": "browser"
+      },
+      {
+        "success": false,
+        "duration_ms": 871.1926937103271,
+        "error": "Parse failed",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S2_002",
+    "scenario": "anti_scrape",
+    "url": "https://www.reddit.com/r/MachineLearning/",
+    "timestamp": "2026-04-16T23:13:35.351096",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url https://www.reddit.com/r/MachineLearning/ --snapshot",
+        "tool": "browser"
+      },
+      {
+        "success": false,
+        "duration_ms": 558.4211349487305,
+        "error": "Parse failed",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S3_001",
+    "scenario": "platform",
+    "url": "bilibili.com/video/BV1xx",
+    "timestamp": "2026-04-16T23:13:36.910884",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 591.1891460418701,
+        "output_length": 0,
+        "error": "error: unknown command 'info'\n",
+        "notes": "opencli CLI执行",
+        "tool": "opencli"
+      },
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url bilibili.com/video/BV1xx --snapshot",
+        "tool": "browser"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S3_002",
+    "scenario": "platform",
+    "url": "zhihu.com/question/12345",
+    "timestamp": "2026-04-16T23:13:38.503274",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 295.62878608703613,
+        "output_length": 0,
+        "error": "error: unknown option '--url'\n",
+        "notes": "opencli CLI执行",
+        "tool": "opencli"
+      },
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url zhihu.com/question/12345 --snapshot",
+        "tool": "browser"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S4_001",
+    "scenario": "spa",
+    "url": "https://example-spa.com",
+    "timestamp": "2026-04-16T23:13:39.800162",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url https://example-spa.com --snapshot",
+        "tool": "browser"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S5_001",
+    "scenario": "login",
+    "url": "https://zhihu.com/messages",
+    "timestamp": "2026-04-16T23:13:40.801523",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 299.36671257019043,
+        "output_length": 0,
+        "error": "error: unknown command 'messages'\n",
+        "notes": "opencli CLI执行",
+        "tool": "opencli"
+      },
+      {
+        "success": null,
+        "duration_ms": 0,
+        "notes": "Browser工具需手动执行: browser --url {url} --snapshot",
+        "manual_command": "browser --url https://zhihu.com/messages --snapshot",
+        "tool": "browser"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S6_001",
+    "scenario": "realtime",
+    "url": "wttr.in/Sydney",
+    "timestamp": "2026-04-16T23:13:42.101293",
+    "expected_tool": "web_fetch",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 150.1779556274414,
+        "error": "Parse failed",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S6_002",
+    "scenario": "realtime",
+    "url": "bilibili hot",
+    "timestamp": "2026-04-16T23:13:43.252682",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 173.51102828979492,
+        "error": "Parse failed",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  }
+]

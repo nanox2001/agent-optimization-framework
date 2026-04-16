@@ -1,0 +1,263 @@
+[
+  {
+    "test_id": "S1_001",
+    "scenario": "static",
+    "url": "https://dbreunig.com/2026/04/14/cybersecurity-is-proof-of-work-now.html",
+    "timestamp": "2026-04-16T13:40:40.396602",
+    "expected_tool": "web_fetch",
+    "tool_sequence": [
+      {
+        "success": true,
+        "duration_ms": 1262.9339694976807,
+        "status_code": 200,
+        "content_length": 12382,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "primary_tool_success": true,
+    "fallback_triggered": false,
+    "final_success": true
+  },
+  {
+    "test_id": "S1_002",
+    "scenario": "static",
+    "url": "https://theleo.zone/posts/pager/",
+    "timestamp": "2026-04-16T13:40:43.661384",
+    "expected_tool": "web_fetch",
+    "tool_sequence": [
+      {
+        "success": true,
+        "duration_ms": 330.718994140625,
+        "status_code": 200,
+        "content_length": 32378,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "primary_tool_success": true,
+    "fallback_triggered": false,
+    "final_success": true
+  },
+  {
+    "test_id": "S2_001",
+    "scenario": "anti_scrape",
+    "url": "https://medium.com/@anthropics/mythos-security-assessment",
+    "timestamp": "2026-04-16T13:40:45.995170",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 40.781497955322266,
+        "content_length": 0,
+        "content_preview": null,
+        "notes": "Browser via agent-browser",
+        "tool": "browser"
+      },
+      {
+        "success": false,
+        "duration_ms": 106.60481452941895,
+        "status_code": 403,
+        "content_length": 0,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S2_002",
+    "scenario": "anti_scrape",
+    "url": "https://www.reddit.com/r/MachineLearning/",
+    "timestamp": "2026-04-16T13:40:48.143648",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 22.93109893798828,
+        "content_length": 0,
+        "content_preview": null,
+        "notes": "Browser via agent-browser",
+        "tool": "browser"
+      },
+      {
+        "success": false,
+        "duration_ms": 96.70138359069824,
+        "status_code": 403,
+        "content_length": 0,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S3_001",
+    "scenario": "platform",
+    "url": "bilibili hot",
+    "timestamp": "2026-04-16T13:40:50.264262",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 6.918668746948242,
+        "output_length": 0,
+        "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+        "notes": "opencli CLI",
+        "tool": "opencli"
+      },
+      {
+        "success": false,
+        "duration_ms": 7.624149322509766,
+        "content_length": 0,
+        "content_preview": null,
+        "notes": "Browser via agent-browser",
+        "tool": "browser"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S3_002",
+    "scenario": "platform",
+    "url": "zhihu hot",
+    "timestamp": "2026-04-16T13:40:52.279083",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 4.723310470581055,
+        "output_length": 0,
+        "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+        "notes": "opencli CLI",
+        "tool": "opencli"
+      },
+      {
+        "success": false,
+        "duration_ms": 21.991968154907227,
+        "content_length": 0,
+        "content_preview": null,
+        "notes": "Browser via agent-browser",
+        "tool": "browser"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S4_001",
+    "scenario": "spa",
+    "url": "https://spa-react-example.netlify.app",
+    "timestamp": "2026-04-16T13:40:54.306254",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 22.572755813598633,
+        "content_length": 0,
+        "content_preview": null,
+        "notes": "Browser via agent-browser",
+        "tool": "browser"
+      },
+      {
+        "success": false,
+        "duration_ms": 282.6695442199707,
+        "status_code": 404,
+        "content_length": 0,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S4_002",
+    "scenario": "spa",
+    "url": "https://react.dev",
+    "timestamp": "2026-04-16T13:40:56.614315",
+    "expected_tool": "browser",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 23.45585823059082,
+        "content_length": 0,
+        "content_preview": null,
+        "notes": "Browser via agent-browser",
+        "tool": "browser"
+      },
+      {
+        "success": true,
+        "duration_ms": 197.0980167388916,
+        "status_code": 200,
+        "content_length": 272441,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "primary_tool_success": false,
+    "fallback_triggered": true,
+    "final_success": true
+  },
+  {
+    "test_id": "S5_001",
+    "scenario": "search",
+    "url": "search: AI agents",
+    "timestamp": "2026-04-16T13:40:58.840155",
+    "expected_tool": "search",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 34.43431854248047,
+        "output_length": 24,
+        "notes": "Search API",
+        "tool": "search"
+      },
+      {
+        "success": false,
+        "duration_ms": 6.194114685058594,
+        "content_length": 0,
+        "content_preview": null,
+        "notes": "Browser via agent-browser",
+        "tool": "browser"
+      }
+    ],
+    "final_success": false
+  },
+  {
+    "test_id": "S6_001",
+    "scenario": "realtime",
+    "url": "https://wttr.in/Sydney?format=j1",
+    "timestamp": "2026-04-16T13:41:00.881019",
+    "expected_tool": "web_fetch",
+    "tool_sequence": [
+      {
+        "success": true,
+        "duration_ms": 1315.4277801513672,
+        "status_code": 200,
+        "content_length": 39505,
+        "notes": "HTTP直接抓取",
+        "tool": "web_fetch"
+      }
+    ],
+    "primary_tool_success": true,
+    "fallback_triggered": false,
+    "final_success": true
+  },
+  {
+    "test_id": "S6_002",
+    "scenario": "realtime",
+    "url": "weibo hot",
+    "timestamp": "2026-04-16T13:41:04.199317",
+    "expected_tool": "opencli",
+    "tool_sequence": [
+      {
+        "success": false,
+        "duration_ms": 5.156993865966797,
+        "output_length": 0,
+        "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+        "notes": "opencli CLI",
+        "tool": "opencli"
+      }
+    ],
+    "final_success": false
+  }
+]
