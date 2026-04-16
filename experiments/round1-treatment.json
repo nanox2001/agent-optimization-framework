@@ -1,0 +1,1033 @@
+{
+  "experiment_id": "phase3_ab_test",
+  "group": "treatment",
+  "round": 1,
+  "config_name": "treatment_smart_optimized",
+  "timestamp": "2026-04-15T09:16:31.502206Z",
+  "status": "completed",
+  "summary": {
+    "total_urls": 30,
+    "successes": 29,
+    "success_rate": 0.9666666666666667,
+    "total_fallbacks": 35,
+    "avg_fallbacks": 1.1666666666666667,
+    "avg_duration_ms": 0.0,
+    "p95_duration_ms": 0,
+    "min_duration_ms": 0,
+    "max_duration_ms": 0
+  },
+  "by_difficulty": {
+    "basic": {
+      "total": 15,
+      "successes": 15,
+      "success_rate": 1.0,
+      "avg_time": 0.0
+    },
+    "hard": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_time": 0.0
+    },
+    "edge": {
+      "total": 5,
+      "successes": 4,
+      "success_rate": 0.8,
+      "avg_time": 0.0
+    }
+  },
+  "individual_results": [
+    {
+      "timestamp": "2026-04-15T09:16:31.501439Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H2-01",
+      "url": "https://www.zhihu.com/question/580000000",
+      "domain": "zhihu.com",
+      "scenario": "login_required",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 22,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501487Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B3-05",
+      "url": "https://www.wired.com/",
+      "domain": "wired.com",
+      "scenario": "news_site",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 22,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501513Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B3-01",
+      "url": "https://techcrunch.com/latest/",
+      "domain": "techcrunch.com",
+      "scenario": "news_site",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 27,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501537Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "E1-02",
+      "url": "https://github.com/torvalds/linux/commits/master",
+      "domain": "github.com",
+      "scenario": "large_page",
+      "difficulty": "edge",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 23,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": true,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501558Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H3-01",
+      "url": "https://www.tiktok.com/@tiktok",
+      "domain": "tiktok.com",
+      "scenario": "anti_scraping",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 23,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501580Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B2-02",
+      "url": "https://github.com/microsoft/vscode",
+      "domain": "github.com",
+      "scenario": "github_page",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race",
+          "browser_last_try"
+        ],
+        "success_tool": "browser_last_try",
+        "fallback_count": 2,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 23,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501598Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B2-01",
+      "url": "https://github.com/torvalds/linux",
+      "domain": "github.com",
+      "scenario": "github_page",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 23,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": true,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501618Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B3-03",
+      "url": "https://arstechnica.com/",
+      "domain": "arstechnica.com",
+      "scenario": "news_site",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 28,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501640Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B3-02",
+      "url": "https://www.theverge.com/",
+      "domain": "theverge.com",
+      "scenario": "news_site",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 25,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501721Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H1-01",
+      "url": "https://mp.weixin.qq.com/s/placeholder1",
+      "domain": "mp.weixin.qq.com",
+      "scenario": "weixin_article",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 29,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501741Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B2-05",
+      "url": "https://github.com/karpathy/llm.c",
+      "domain": "github.com",
+      "scenario": "github_page",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 23,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501766Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "E1-01",
+      "url": "https://en.wikipedia.org/wiki/Special:LongPages",
+      "domain": "wikipedia.org",
+      "scenario": "large_page",
+      "difficulty": "edge",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 26,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501791Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "E3-01",
+      "url": "https://api.github.com/repos/torvalds/linux",
+      "domain": "api.github.com",
+      "scenario": "special_format",
+      "difficulty": "edge",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race",
+          "browser_last_try",
+          "browser"
+        ],
+        "success_tool": null,
+        "fallback_count": 3,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": false,
+        "content_length": 0,
+        "content_type": "json",
+        "quality_score": 0.0,
+        "error": "All tools failed"
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501812Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H2-03",
+      "url": "https://www.linkedin.com/pulse/article",
+      "domain": "linkedin.com",
+      "scenario": "login_required",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 25,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501835Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H1-02",
+      "url": "https://mp.weixin.qq.com/s/placeholder2",
+      "domain": "mp.weixin.qq.com",
+      "scenario": "weixin_article",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 29,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501852Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "E2-01",
+      "url": "https://bit.ly/3example1",
+      "domain": "bit.ly",
+      "scenario": "redirect_chain",
+      "difficulty": "edge",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 19,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501872Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B1-02",
+      "url": "https://httpbin.org/html",
+      "domain": "httpbin.org",
+      "scenario": "basic_static_html",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 24,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501888Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B3-04",
+      "url": "https://www.reuters.com/technology/",
+      "domain": "reuters.com",
+      "scenario": "news_site",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 24,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501914Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H1-04",
+      "url": "https://mp.weixin.qq.com/s/placeholder4",
+      "domain": "mp.weixin.qq.com",
+      "scenario": "weixin_article",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race",
+          "browser_last_try"
+        ],
+        "success_tool": "browser_last_try",
+        "fallback_count": 2,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 29,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501932Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B1-03",
+      "url": "https://example.com",
+      "domain": "example.com",
+      "scenario": "basic_static_html",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 24,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": true,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501955Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H1-03",
+      "url": "https://mp.weixin.qq.com/s/placeholder3",
+      "domain": "mp.weixin.qq.com",
+      "scenario": "weixin_article",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race",
+          "browser_last_try",
+          "browser"
+        ],
+        "success_tool": "browser",
+        "fallback_count": 4,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 29,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.501980Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "E2-02",
+      "url": "https://t.co/1example2",
+      "domain": "t.co",
+      "scenario": "redirect_chain",
+      "difficulty": "edge",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race",
+          "browser_last_try"
+        ],
+        "success_tool": "browser_last_try",
+        "fallback_count": 2,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 17,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.502001Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B1-05",
+      "url": "https://docs.python.org/3/",
+      "domain": "docs.python.org",
+      "scenario": "basic_static_html",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 28,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.502024Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H3-03",
+      "url": "https://x.com/elonmusk/status/1234567890",
+      "domain": "x.com",
+      "scenario": "anti_scraping",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race",
+          "browser_last_try",
+          "browser"
+        ],
+        "success_tool": "browser",
+        "fallback_count": 4,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 18,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.502042Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B2-03",
+      "url": "https://github.com/langchain-ai/langchain",
+      "domain": "github.com",
+      "scenario": "github_page",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best"
+        ],
+        "success_tool": "predicted_best",
+        "fallback_count": 0,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 23,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.502062Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B2-04",
+      "url": "https://github.com/facebook/react",
+      "domain": "github.com",
+      "scenario": "github_page",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 23,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": true,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.502084Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H3-02",
+      "url": "https://www.instagram.com/taylorswift/",
+      "domain": "instagram.com",
+      "scenario": "anti_scraping",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 26,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.502108Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B1-01",
+      "url": "https://news.ycombinator.com",
+      "domain": "news.ycombinator.com",
+      "scenario": "basic_static_html",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race",
+          "browser_last_try",
+          "browser"
+        ],
+        "success_tool": "browser",
+        "fallback_count": 4,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 33,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.502127Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "B1-04",
+      "url": "https://www.w3schools.com/html/",
+      "domain": "w3schools.com",
+      "scenario": "basic_static_html",
+      "difficulty": "basic",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race"
+        ],
+        "success_tool": "parallel_race",
+        "fallback_count": 1,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 26,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    },
+    {
+      "timestamp": "2026-04-15T09:16:31.502148Z",
+      "experiment_id": "phase3_ab_test",
+      "group": "treatment",
+      "round": 1,
+      "test_case_id": "H2-02",
+      "url": "https://medium.com/@tech/article",
+      "domain": "medium.com",
+      "scenario": "login_required",
+      "difficulty": "hard",
+      "execution": {
+        "tools_attempted": [
+          "predicted_best",
+          "parallel_race",
+          "browser_last_try"
+        ],
+        "success_tool": "browser_last_try",
+        "fallback_count": 2,
+        "duration_ms": 0,
+        "timeout_occurred": false
+      },
+      "result": {
+        "success": true,
+        "content_length": 23,
+        "content_type": "html",
+        "quality_score": 0.9,
+        "error": null
+      },
+      "metadata": {
+        "cache_hit": false,
+        "mirror_used": null,
+        "parallel_attempts": true
+      }
+    }
+  ]
+}

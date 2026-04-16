@@ -1,0 +1,19 @@
+{
+  "name": "control_default_chain",
+  "description": "Default sequential tool chain for control group - Phase 3 A/B Test",
+  "version": "1.0",
+  "tool_selection": "sequential_fixed",
+  "chain": ["web_fetch", "jina", "scrapling", "browser"],
+  "timeout": 30000,
+  "fallback_mode": "on_failure",
+  "cache_enabled": false,
+  "parallel_fetch": false,
+  "retry": {
+    "enabled": false,
+    "max_attempts": 3
+  },
+  "selection_strategy": {
+    "type": "fixed_order",
+    "description": "Try tools in fixed order: web_fetch -> jina -> scrapling -> browser"
+  }
+}

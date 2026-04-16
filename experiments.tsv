@@ -1,0 +1,7 @@
+timestamp	experiment_id	variant_id	scenario	status	duration_sec	metrics_json	git_commit	description
+2026-04-15T19:16:00Z	phase3_web_scrape	control_round1	web_scrape	completed	60	{"success_rate":0.967,"avg_fallback":0.43,"hard_success":0.9}	phase3_exp	Control baseline - default tool chain
+2026-04-15T19:16:00Z	phase3_web_scrape	treatment_round1	web_scrape	completed	60	{"success_rate":0.967,"avg_fallback":1.17,"hard_success":1.0}	phase3_exp	Treatment - smart optimization strategy
+2026-04-15T20:09:00Z	phase3_web_scrape	control_rounds2-5	web_scrape	completed	180	{"success_rate":0.967,"avg_fallback":0.43,"hard_success":0.9,"total_requests":150}	phase3_exp	Control aggregated 5 rounds
+2026-04-15T20:09:00Z	phase3_web_scrape	treatment_rounds2-5	web_scrape	completed	180	{"success_rate":0.967,"avg_fallback":1.17,"hard_success":1.0,"total_requests":150}	phase3_exp	Treatment aggregated 5 rounds
+2026-04-15T20:15:00Z	phase3_web_scrape	final_analysis	web_scrape	completed	30	{"control_success":0.967,"treatment_success":0.967,"hard_diff":0.1,"edge_diff":-0.2}	phase3_exp	Final statistical analysis
+2026-04-15T20:20:00Z	phase3_web_scrape	落地实施	skill_update	completed	10	{"updates":["hard_domain_rules","edge_domain_rules","fallback_optimization"]}	phase3_exp	SKILL.md updated with optimization rules

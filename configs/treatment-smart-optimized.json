@@ -1,0 +1,40 @@
+{
+  "name": "treatment_smart_optimized",
+  "description": "Smart optimized strategy with dynamic selection and parallel fetch - Phase 3 A/B Test",
+  "version": "1.0",
+  "tool_selection": "dynamic_history_based",
+  "primary_selector": "domain_tool_predictor",
+  "parallel_fetch": {
+    "enabled": true,
+    "domains": ["weixin.qq.com", "zhihu.com", "paywalled_sites"],
+    "tools": ["web_fetch", "jina", "scrapling"],
+    "race_mode": "first_success"
+  },
+  "cache": {
+    "enabled": true,
+    "mirror_discovery": true,
+    "ttl_seconds": 3600
+  },
+  "timeout": {
+    "default": 30000,
+    "by_domain": {
+      "weixin.qq.com": 60000,
+      "github.com": 15000
+    }
+  },
+  "fallback_chain": ["predicted_best", "parallel_race", "browser_last_try"],
+  "retry": {
+    "enabled": true,
+    "max_attempts": 3,
+    "backoff_multiplier": 2
+  },
+  "selection_strategy": {
+    "type": "dynamic_history_based",
+    "description": "Use domain history to predict best tool, enable parallel race for high-risk domains"
+  },
+  "domain_prediction": {
+    "model_type": "rule_based",
+    "features": ["domain", "path_pattern", "content_type_hint"],
+    "fallback_to_default": true
+  }
+}
