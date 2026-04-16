@@ -23,53 +23,65 @@ TEST_CASES = [
     {"id": "S2_001", "scenario": "anti_scrape", "url": "https://medium.com/@anthropics/mythos-security-assessment", "expected_tool": "browser"},
     {"id": "S2_002", "scenario": "anti_scrape", "url": "https://www.reddit.com/r/MachineLearning/", "expected_tool": "browser"},
     
-    # S3: 平台内容
-    {"id": "S3_001", "scenario": "platform", "url": "bilibili.com/video/BV1xx", "expected_tool": "opencli", "opencli_cmd": "opencli bilibili info --bvid BV1xx -f json"},
-    {"id": "S3_002", "scenario": "platform", "url": "zhihu.com/question/12345", "expected_tool": "opencli", "opencli_cmd": "opencli zhihu question --url https://zhihu.com/question/12345 -f json"},
+    # S3: 平台内容 - 使用正确的 opencli 命令
+    {"id": "S3_001", "scenario": "platform", "url": "bilibili hot", "expected_tool": "opencli", "opencli_cmd": "opencli bilibili hot --limit 5 -f json"},
+    {"id": "S3_002", "scenario": "platform", "url": "zhihu hot", "expected_tool": "opencli", "opencli_cmd": "opencli zhihu hot -f json"},
     
-    # S4: JS渲染
-    {"id": "S4_001", "scenario": "spa", "url": "https://example-spa.com", "expected_tool": "browser"},
+    # S4: JS渲染页
+    {"id": "S4_001", "scenario": "spa", "url": "https://spa-react-example.netlify.app", "expected_tool": "browser"},
     
-    # S5: 登录内容
-    {"id": "S5_001", "scenario": "login", "url": "https://zhihu.com/messages", "expected_tool": "opencli", "opencli_cmd": "opencli zhihu messages -f json"},
+    # S5: 搜索场景
+    {"id": "S5_001", "scenario": "search", "url": "search: AI agents", "expected_tool": "search", "search_query": "what are AI agents"},
     
     # S6: 实时数据
-    {"id": "S6_001", "scenario": "realtime", "url": "wttr.in/Sydney", "expected_tool": "web_fetch"},
-    {"id": "S6_002", "scenario": "realtime", "url": "bilibili hot", "expected_tool": "opencli", "opencli_cmd": "opencli bilibili hot --limit 10 -f json"},
+    {"id": "S6_001", "scenario": "realtime", "url": "https://wttr.in/Sydney?format=j1", "expected_tool": "web_fetch"},
+    {"id": "S6_002", "scenario": "realtime", "url": "weibo hot", "expected_tool": "opencli", "opencli_cmd": "opencli weibo hot -f json"},
 ]
 
 def test_web_fetch(url):
     """测试 web_fetch 工具"""
     start = time.time()
     try:
-        # 使用 web_fetch 工具
+        import requests
+        resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+        duration = (time.time() - start) * 1000
+        
+        return {
+            "success": resp.status_code == 200,
+            "duration_ms": duration,
+            "status_code": resp.status_code,
+            "content_length": len(resp.text) if resp.status_code == 200 else 0,
+            "notes": "HTTP直接抓取"
+        }
+    except Exception as e:
+        return {"success": False, "duration_ms": (time.time() - start) * 1000, "error": str(e)}
+
+def test_search(query):
+    """测试 Search API 工具"""
+    start = time.time()
+    try:
+        # 使用 search-suite 的 search.py
         result = subprocess.run(
-            ["python3", "-c", f"""
-import requests
-resp = requests.get('{url}', timeout=15)
-print(json.dumps({{
-    'success': resp.status_code == 200,
-    'status_code': resp.status_code,
-    'content_length': len(resp.text)
-}}))
-"""],
+            ["python3", "/home/jerry/.openclaw/workspace/skills/search-suite/scripts/search.py", query],
             capture_output=True,
             text=True,
-            timeout=20
+            timeout=30
         )
         duration = (time.time() - start) * 1000
         
         try:
-            data = json.loads(result.stdout.strip())
+            data = json.loads(result.stdout)
+            success = data.get("success", False)
             return {
-                "success": data.get("success", False),
+                "success": success,
                 "duration_ms": duration,
-                "status_code": data.get("status_code"),
-                "content_length": data.get("content_length"),
-                "notes": "HTTP直接抓取"
+                "engine": data.get("engine", "unknown"),
+                "results_count": len(data.get("results", [])),
+                "has_answer": bool(data.get("answer")),
+                "notes": f"Search API via {data.get('engine', 'unknown')}"
             }
         except:
-            return {"success": False, "duration_ms": duration, "error": "Parse failed"}
+            return {"success": False, "duration_ms": duration, "error": "Parse failed", "raw": result.stdout[:200]}
     except Exception as e:
         return {"success": False, "duration_ms": (time.time() - start) * 1000, "error": str(e)}
 
@@ -138,10 +150,12 @@ def run_test(test_case):
         ]
     elif test_case['scenario'] == 'spa':
         tools_to_try = [('browser', test_browser, test_case['url'])]
-    elif test_case['scenario'] == 'login':
+    elif test_case['scenario'] == 'search' and 'search_query' in test_case:
+        tools_to_try = [('search', test_search, test_case['search_query'])]
+    elif test_case['scenario'] == 'realtime' and 'opencli_cmd' in test_case:
         tools_to_try = [
             ('opencli', test_opencli, test_case['opencli_cmd']),
-            ('browser', test_browser, test_case['url'])
+            ('web_fetch', test_web_fetch, test_case['url'])
         ]
     elif test_case['scenario'] == 'realtime':
         tools_to_try = [('web_fetch', test_web_fetch, test_case['url'])]
