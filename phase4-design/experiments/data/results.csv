@@ -1,0 +1,13 @@
+timestamp,experiment_id,variant,metric,value,unit
+20260417_083052,E1,B_no_retry,success,false,boolean
+20260417_083052,E1,B_no_retry,attempts,1,count
+20260417_083052,E1,B_no_retry,timeouts,1,count
+20260417_083052,E1,A_progressive_retry,success,true,boolean
+20260417_083052,E1,A_progressive_retry,attempts,3,count
+20260417_083052,E1,A_progressive_retry,timeouts,2,count
+20260417_083133,E2,B_no_checkpoint,completed_steps,2,count
+20260417_083133,E2,B_no_checkpoint,recovery_possible,false,boolean
+20260417_083133,E2,B_no_checkpoint,steps_to_redo,5,count
+20260417_083133,E2,A_per_step_checkpoint,completed_steps,2,count
+20260417_083133,E2,A_per_step_checkpoint,recovery_possible,true,boolean
+20260417_083133,E2,A_per_step_checkpoint,steps_to_redo,3,count

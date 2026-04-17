@@ -1,0 +1,35 @@
+{
+  "experiment_id": "E1",
+  "timestamp": "20260417_083052",
+  "config": {
+    "base_timeout": 5,
+    "task_duration": 6,
+    "progressive_timeouts": [5, 7, 10]
+  },
+  "results": [
+  [2026-04-17 08:30:52] [E1] Running Variant B: No Retry (Control)
+[2026-04-17 08:30:52] [E1]   Attempt 1/1: Timeout=5s
+[2026-04-17 08:30:57] [E1]   Task timed out (expected)
+{
+    "variant": "B_no_retry",
+    "success": false,
+    "attempts": 1,
+    "timeouts": 1,
+    "total_time_seconds": ,
+    "final_status": "failed_timeout"
+  },
+  [2026-04-17 08:30:57] [E1] Running Variant A: Progressive Timeout Retry
+[2026-04-17 08:30:57] [E1]   Attempt 1: Timeout=5s
+[2026-04-17 08:31:02] [E1]   Attempt 1 timed out, increasing timeout...
+[2026-04-17 08:31:02] [E1]   Attempt 2: Timeout=7s
+[2026-04-17 08:31:08] [E1]   Task completed on attempt 2
+{
+    "variant": "A_progressive_retry",
+    "success": true,
+    "attempts": 2,
+    "timeouts": 1,
+    "total_time_seconds": ,
+    "final_status": "success"
+  }
+]
+}

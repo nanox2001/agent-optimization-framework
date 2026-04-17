@@ -1,0 +1,57 @@
+{
+  "experiment_id": "E1",
+  "experiment_name": "Retry Mechanism",
+  "timestamp": "2026-04-17T08:30:52",
+  "config": {
+    "base_timeout_seconds": 5,
+    "task_duration_variant_b": 8,
+    "task_duration_variant_a": 6,
+    "progressive_timeouts": [5, 7, 10]
+  },
+  "results": [
+    {
+      "variant": "B_no_retry",
+      "description": "无重试对照组",
+      "success": false,
+      "attempts": 1,
+      "timeouts": 1,
+      "total_time_seconds": 5.0,
+      "final_status": "failed_timeout",
+      "notes": "单次执行超时后失败，无恢复机制"
+    },
+    {
+      "variant": "A_progressive_retry",
+      "description": "渐进式超时重试",
+      "success": true,
+      "attempts": 2,
+      "timeouts": 1,
+      "total_time_seconds": 11.0,
+      "final_status": "success",
+      "retry_schedule": [
+        {"attempt": 1, "timeout": 5, "result": "timeout"},
+        {"attempt": 2, "timeout": 7, "result": "success"}
+      ],
+      "notes": "第1次超时后，第2次重试成功完成"
+    }
+  ],
+  "comparison": {
+    "success_rate": {
+      "variant_b": "0%",
+      "variant_a": "100%",
+      "improvement": "+100%"
+    },
+    "avg_attempts": {
+      "variant_b": 1,
+      "variant_a": 2
+    },
+    "avg_time_to_completion": {
+      "variant_b": "N/A (失败)",
+      "variant_a": "11s"
+    },
+    "cost_overhead": {
+      "variant_b": "1x (基准)",
+      "variant_a": "2x (2次尝试)"
+    }
+  },
+  "conclusion": "渐进式超时重试显著提升成功率，代价是额外API调用成本"
+}

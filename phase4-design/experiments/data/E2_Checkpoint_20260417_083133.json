@@ -1,0 +1,48 @@
+{
+  "experiment_id": "E2",
+  "timestamp": "20260417_083133",
+  "config": {
+    "total_steps": 5,
+    "interrupt_at_step": 3
+  },
+  "results": [
+  [2026-04-17 08:31:33] [E2] Running Variant B: No Checkpoint (Control)
+[2026-04-17 08:31:33] [E2]   Starting task without checkpoint...
+[2026-04-17 08:31:33] [E2]   Executing step 1...
+[2026-04-17 08:31:34] [E2]   Executing step 2...
+[2026-04-17 08:31:35] [E2]   Executing step 3...
+[2026-04-17 08:31:36] [E2]   Simulating interruption at step 3
+[2026-04-17 08:31:36] [E2]   Task interrupted at step 3, completed: 2
+{
+    "variant": "B_no_checkpoint",
+    "success": false,
+    "completed_steps": 2,
+    "total_steps": 5,
+    "recovery_possible": false,
+    "steps_to_redo": 5,
+    "total_time_seconds": ,
+    "final_status": "failed_interrupt"
+  },
+  [2026-04-17 08:31:36] [E2] Running Variant A: Per-Step Checkpoint
+[2026-04-17 08:31:36] [E2]   Starting task with checkpoint enabled...
+[2026-04-17 08:31:36] [E2]   Executing step 1...
+[2026-04-17 08:31:37] [E2]   Checkpoint saved for step 1
+[2026-04-17 08:31:37] [E2]   Executing step 2...
+[2026-04-17 08:31:38] [E2]   Checkpoint saved for step 2
+[2026-04-17 08:31:38] [E2]   Executing step 3...
+[2026-04-17 08:31:39] [E2]   Simulating interruption at step 3
+[2026-04-17 08:31:39] [E2]   Task interrupted at step 3, checkpoint available for step 2
+[2026-04-17 08:31:39] [E2]   Recovery possible:  steps completed, 5 to redo
+{
+    "variant": "A_per_step_checkpoint",
+    "success": false,
+    "completed_steps": 2,
+    "total_steps": 5,
+    "recovery_possible": true,
+    "steps_to_redo": 5,
+    "checkpoint_saved": true,
+    "total_time_seconds": ,
+    "final_status": "interrupted_with_recovery"
+  }
+]
+}

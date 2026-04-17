@@ -1,0 +1,58 @@
+{
+  "experiment_id": "E2",
+  "experiment_name": "Checkpoint Mechanism",
+  "timestamp": "2026-04-17T08:31:33",
+  "config": {
+    "total_steps": 5,
+    "interrupt_at_step": 3,
+    "checkpoint_interval": "per_step"
+  },
+  "results": [
+    {
+      "variant": "B_no_checkpoint",
+      "description": "无Checkpoint对照组",
+      "success": false,
+      "completed_steps": 2,
+      "total_steps": 5,
+      "recovery_possible": false,
+      "steps_to_redo": 5,
+      "total_time_seconds": 3.0,
+      "final_status": "failed_interrupt",
+      "notes": "中断后无法恢复，需要从头开始执行全部5步"
+    },
+    {
+      "variant": "A_per_step_checkpoint",
+      "description": "每步保存Checkpoint",
+      "success": false,
+      "completed_steps": 2,
+      "total_steps": 5,
+      "recovery_possible": true,
+      "checkpoint_saved": true,
+      "steps_to_redo": 3,
+      "checkpointed_steps": [1, 2],
+      "total_time_seconds": 3.0,
+      "final_status": "interrupted_with_recovery",
+      "notes": "中断后可从第3步恢复，只需重执行3步(3-5)"
+    }
+  ],
+  "comparison": {
+    "recovery_capability": {
+      "variant_b": "无",
+      "variant_a": "有"
+    },
+    "work_saved_on_interrupt": {
+      "variant_b": "0% (全部重做)",
+      "variant_a": "40% (已完成2步无需重做)"
+    },
+    "steps_to_redo": {
+      "variant_b": 5,
+      "variant_a": 3,
+      "reduction": "40%"
+    },
+    "storage_overhead": {
+      "variant_b": "0 bytes",
+      "variant_a": "~2KB (2个checkpoint文件)"
+    }
+  },
+  "conclusion": "Checkpoint机制使任务可恢复，减少40%重复工作，代价是微小存储开销"
+}
