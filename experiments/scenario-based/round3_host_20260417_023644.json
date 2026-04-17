@@ -1,0 +1,1808 @@
+{
+  "metadata": {
+    "version": "3.0",
+    "timestamp": "20260417_023644",
+    "total_tests": 72,
+    "successful": 54,
+    "success_rate": 0.75,
+    "fallbacks_triggered": 22,
+    "by_scenario": {
+      "static": {
+        "total": 12,
+        "success": 12,
+        "success_rate": 1.0
+      },
+      "anti_scrape": {
+        "total": 12,
+        "success": 12,
+        "success_rate": 1.0
+      },
+      "platform": {
+        "total": 12,
+        "success": 3,
+        "success_rate": 0.25
+      },
+      "spa": {
+        "total": 12,
+        "success": 12,
+        "success_rate": 1.0
+      },
+      "search": {
+        "total": 12,
+        "success": 12,
+        "success_rate": 1.0
+      },
+      "realtime": {
+        "total": 12,
+        "success": 3,
+        "success_rate": 0.25
+      }
+    }
+  },
+  "results": [
+    {
+      "test_id": "S1_001",
+      "scenario": "static",
+      "url": "https://news.ycombinator.com",
+      "timestamp": "2026-04-17T02:36:45.203348",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 966.3116931915283,
+          "status_code": 200,
+          "content_length": 34555,
+          "content_preview": "<html lang=\"en\" op=\"news\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" type=\"text/css\" href=\"news.css?yYKWwbA2OOKfV5BuGDAy\"><link rel=\"icon\" href=\"y18.svg\"><link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS\" href=\"rss\"><title>Hacker News</title></head><body><center><table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\"><tr><td bgcolor=\"#ff6600\"><table border=",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_002",
+      "scenario": "static",
+      "url": "https://example.com",
+      "timestamp": "2026-04-17T02:36:45.325076",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 121.64187431335449,
+          "status_code": 200,
+          "content_length": 528,
+          "content_preview": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style></head><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p><p><a href=\"https://iana.org/domains/example\">Learn more<",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_003",
+      "scenario": "static",
+      "url": "https://httpbin.org/html",
+      "timestamp": "2026-04-17T02:36:46.196571",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 871.4563846588135,
+          "status_code": 200,
+          "content_length": 3739,
+          "content_preview": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n      <h1>Herman Melville - Moby-Dick</h1>\n\n      <div>\n        <p>\n          Availing himself of the mild, summer-cool weather that now reigned in these latitudes, and in preparation for the peculiarly active pursuits shortly to be anticipated, Perth, the begrimed, blistered old blacksmith, had not removed his portable forge to the hold again, after concluding his contributory work for Ahab's leg, but still retained it on deck, fast lashed to r",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_004",
+      "scenario": "static",
+      "url": "https://docs.python.org/3/tutorial/",
+      "timestamp": "2026-04-17T02:36:46.530050",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 333.4360122680664,
+          "status_code": 200,
+          "content_length": 37088,
+          "content_preview": "<!DOCTYPE html>\n\n<html lang=\"en\" data-content_root=\"../\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n<meta property=\"og:title\" content=\"The Python Tutorial\" />\n<meta property=\"og:type\" content=\"website\" />\n<meta property=\"og:url\" content=\"https://docs.python.org/3/tutorial/index.html\" />\n<meta property=\"og:site_name\" content=\"Python documentation\" />\n<meta",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_005",
+      "scenario": "static",
+      "url": "https://github.com/torvalds/linux",
+      "timestamp": "2026-04-17T02:36:47.360542",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 830.2762508392334,
+          "status_code": 200,
+          "content_length": 325822,
+          "content_preview": "\n\n\n\n\n\n<!DOCTYPE html>\n<html\n  lang=\"en\"\n  \n  data-color-mode=\"auto\" data-light-theme=\"light\" data-dark-theme=\"dark\"\n  data-a11y-animated-images=\"system\" data-a11y-link-underlines=\"true\"\n  \n  >\n\n\n\n\n  <head>\n    <meta charset=\"utf-8\">\n  <link rel=\"dns-prefetch\" href=\"https://github.githubassets.com\">\n  <link rel=\"dns-prefetch\" href=\"https://avatars.githubusercontent.com\">\n  <link rel=\"dns-prefetch\" href=\"https://github-cloud.s3.amazonaws.com\">\n  <link rel=\"dns-prefetch\" href=\"https://user-images.g",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_006",
+      "scenario": "static",
+      "url": "https://www.w3schools.com/html/",
+      "timestamp": "2026-04-17T02:36:47.734504",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 373.856782913208,
+          "status_code": 200,
+          "content_length": 407449,
+          "content_preview": "\n<!DOCTYPE html>\n<html lang=\"en-US\">\n<head>\n<title>HTML Tutorial</title>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"title\" property=\"og:title\" content=\"W3Schools.com\">\n<meta name=\"Keywords\" content=\"HTML, Python, CSS, SQL, JavaScript, How to, PHP, Java, C, C++, C#, jQuery, Bootstrap, Colors, W3.CSS, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Trainin",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_007",
+      "scenario": "static",
+      "url": "https://dbreunig.com/2026/04/14/cybersecurity-is-proof-of-work-now.html",
+      "timestamp": "2026-04-17T02:36:49.158829",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1424.2453575134277,
+          "status_code": 200,
+          "content_length": 12382,
+          "content_preview": "<!DOCTYPE html>\n<html lang=\"en\"><head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Cybersecurity Looks Like Proof of Work Now</title><!-- Begin Jekyll SEO tag v2.8.0 -->\n<meta name=\"generator\" content=\"Jekyll v4.3.4\" />\n<meta property=\"og:title\" content=\"Cybersecurity Looks Like Proof of Work Now\" />\n<meta name=\"author\" content=\"Drew Breunig\" />\n<meta property=\"og:locale\" ",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_008",
+      "scenario": "static",
+      "url": "https://theleo.zone/posts/pager/",
+      "timestamp": "2026-04-17T02:36:49.590372",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 431.4618110656738,
+          "status_code": 200,
+          "content_length": 32348,
+          "content_preview": "<!doctype html><html lang=en><head><meta charset=utf-8><title>I Made a Terminal Pager | Leo Robinovitch @ The Leo Zone</title>\n<link rel=icon href=/img/favicon.png type=image/x-icon><meta name=viewport content=\"width=device-width,initial-scale=1\"><meta name=description content=\"A writeup on implementing my own terminal viewport component in Go, which is used in my Terminal pager robinovitch61/lore and in my Kubernetes log viewer terminal application robinovitch61/kl.\"><link rel=stylesheet href=/",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_009",
+      "scenario": "static",
+      "url": "https://github.com/microsoft/vscode",
+      "timestamp": "2026-04-17T02:36:50.288888",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 698.249101638794,
+          "status_code": 200,
+          "content_length": 379450,
+          "content_preview": "\n\n\n\n\n\n<!DOCTYPE html>\n<html\n  lang=\"en\"\n  \n  data-color-mode=\"auto\" data-light-theme=\"light\" data-dark-theme=\"dark\"\n  data-a11y-animated-images=\"system\" data-a11y-link-underlines=\"true\"\n  \n  >\n\n\n\n\n  <head>\n    <meta charset=\"utf-8\">\n  <link rel=\"dns-prefetch\" href=\"https://github.githubassets.com\">\n  <link rel=\"dns-prefetch\" href=\"https://avatars.githubusercontent.com\">\n  <link rel=\"dns-prefetch\" href=\"https://github-cloud.s3.amazonaws.com\">\n  <link rel=\"dns-prefetch\" href=\"https://user-images.g",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_010",
+      "scenario": "static",
+      "url": "https://github.com/facebook/react",
+      "timestamp": "2026-04-17T02:36:51.186951",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 897.9835510253906,
+          "status_code": 200,
+          "content_length": 363115,
+          "content_preview": "\n\n\n\n\n\n<!DOCTYPE html>\n<html\n  lang=\"en\"\n  \n  data-color-mode=\"auto\" data-light-theme=\"light\" data-dark-theme=\"dark\"\n  data-a11y-animated-images=\"system\" data-a11y-link-underlines=\"true\"\n  \n  >\n\n\n\n\n  <head>\n    <meta charset=\"utf-8\">\n  <link rel=\"dns-prefetch\" href=\"https://github.githubassets.com\">\n  <link rel=\"dns-prefetch\" href=\"https://avatars.githubusercontent.com\">\n  <link rel=\"dns-prefetch\" href=\"https://github-cloud.s3.amazonaws.com\">\n  <link rel=\"dns-prefetch\" href=\"https://user-images.g",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_011",
+      "scenario": "static",
+      "url": "https://www.reuters.com/technology/",
+      "timestamp": "2026-04-17T02:36:51.335359",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 148.37265014648438,
+          "status_code": 200,
+          "content_length": 771,
+          "content_preview": "<html lang=\"en\"><head><title>reuters.com</title><style>#cmsg{animation: A 1.5s;}@keyframes A{0%{opacity:0;}99%{opacity:0;}100%{opacity:1;}}</style></head><body style=\"margin:0\"><p id=\"cmsg\">Please enable JS and disable any ad blocker</p><script data-cfasync=\"false\">var dd={'rt':'c','cid':'AHrlqAAAAAMArFhqIg0aAwkAMQOxGQ==','hsh':'2013457ADA70C67D6A4123E0A76873','t':'fe','qp':'','s':43909,'e':'7ab0b3d9cb8aa15bb2c43c22dd43ef94f090015cb96309f924967982518155689682710b3a064987d3b1418435ff4c78','host':",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S1_012",
+      "scenario": "static",
+      "url": "https://arstechnica.com/",
+      "timestamp": "2026-04-17T02:36:53.022468",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1687.0508193969727,
+          "status_code": 200,
+          "content_length": 345618,
+          "content_preview": "<!doctype html>\n<html lang=\"en\" class=\"view-grid\">\n\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Ars Technica - Serving the Technologist since 1998. News, reviews, and analysis.</title>\n<link rel=\"preconnect\" href=\"https://c.arstechnica.com\">\n<script>\n    window.snowplowQueue = window.snowplowQueue || [];\n    window.arsSP = {\n        entities: {\"site\":{\"org_id\":\"4gKgcFGUFUvCGFzHakTPfYp85Yi8\",\"site_env\":\"production\",\"site_app_vers",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_001",
+      "scenario": "anti_scrape",
+      "url": "https://medium.com/@anthropics/mythos-security-assessment",
+      "timestamp": "2026-04-17T02:36:53.125139",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 102.59532928466797,
+          "status_code": 200,
+          "content_length": 7325,
+          "content_preview": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helve",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_002",
+      "scenario": "anti_scrape",
+      "url": "https://www.reddit.com/r/MachineLearning/",
+      "timestamp": "2026-04-17T02:36:53.195578",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 70.404052734375,
+          "status_code": 200,
+          "content_length": 8384,
+          "content_preview": "\n  <!DOCTYPE html>\n  <html lang=\"en\">\n    <head>\n      <meta charset=\"UTF-8\" />\n      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n      <link href=\"https://www.redditstatic.com/shreddit/assets/favicon/64x64.png\" rel=\"icon shortcut\" sizes=\"64x64\" />\n      <title>Reddit - Please wait for verification</title>\n      <script nonce=\"0e15006f-57fa-4975-8134-59850a728526\">\n        document.addEventListener(\"DOMContentLoaded\",async function(){var e=document.forms[0],n=(e.onsu",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_003",
+      "scenario": "anti_scrape",
+      "url": "https://www.reddit.com/r/programming/",
+      "timestamp": "2026-04-17T02:36:53.274327",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 78.71413230895996,
+          "status_code": 200,
+          "content_length": 8380,
+          "content_preview": "\n  <!DOCTYPE html>\n  <html lang=\"en\">\n    <head>\n      <meta charset=\"UTF-8\" />\n      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n      <link href=\"https://www.redditstatic.com/shreddit/assets/favicon/64x64.png\" rel=\"icon shortcut\" sizes=\"64x64\" />\n      <title>Reddit - Please wait for verification</title>\n      <script nonce=\"55018072-f182-4408-bca3-310d3c429c07\">\n        document.addEventListener(\"DOMContentLoaded\",async function(){var e=document.forms[0],n=(e.onsu",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_004",
+      "scenario": "anti_scrape",
+      "url": "https://medium.com/@tech/understanding-llms",
+      "timestamp": "2026-04-17T02:36:53.355600",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 81.23660087585449,
+          "status_code": 200,
+          "content_length": 7241,
+          "content_preview": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helve",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_005",
+      "scenario": "anti_scrape",
+      "url": "https://www.linkedin.com/pulse/ai-trends-2026",
+      "timestamp": "2026-04-17T02:36:54.185881",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 830.2419185638428,
+          "status_code": 200,
+          "content_length": 98192,
+          "content_preview": "<!DOCTYPE html>\n\n    \n    \n    \n    \n    \n    <html class=\"bg-color-background-canvas\" lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_klp_home\">\n          \n    <meta name=\"robots\" content=\"max-image-preview:large, noarchive\">\n    <meta name=\"bingbot\" content=\"max-image-preview:large, noarchive\">\n  \n<!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"0.0.1488\" data-call-tree-id=\"AAZPntJpdsy548gB99B9dg==\" data-multiproduct-",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_006",
+      "scenario": "anti_scrape",
+      "url": "https://www.instagram.com/taylorswift/",
+      "timestamp": "2026-04-17T02:36:54.906796",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 720.5915451049805,
+          "status_code": 200,
+          "content_length": 931067,
+          "content_preview": "<!DOCTYPE html><html class=\"_9dls _ar44\" lang=\"en\" dir=\"ltr\"><head><link data-default-icon=\"https://static.cdninstagram.com/rsrc.php/yr/r/rzWiSjZRxk5.webp\" rel=\"icon\" sizes=\"192x192\" href=\"https://static.cdninstagram.com/rsrc.php/yr/r/rzWiSjZRxk5.webp\" /><meta name=\"bingbot\" content=\"noarchive\" /><meta name=\"robots\" content=\"noarchive, noimageindex\" /><meta charset=\"utf-8\" /><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"default\" /><meta name=\"mobile-web-app-capable\" content=\"yes\" /",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_007",
+      "scenario": "anti_scrape",
+      "url": "https://x.com/elonmusk/",
+      "timestamp": "2026-04-17T02:36:56.093129",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1186.2473487854004,
+          "status_code": 200,
+          "content_length": 249120,
+          "content_preview": "<!DOCTYPE html><html dir=\"ltr\" lang=\"en\"><head><meta charset=\"utf-8\" /><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover\" /><link rel=\"preconnect\" href=\"//abs.twimg.com\" /><link rel=\"dns-prefetch\" href=\"//abs.twimg.com\" /><link rel=\"preconnect\" href=\"//api.twitter.com\" /><link rel=\"dns-prefetch\" href=\"//api.twitter.com\" /><link rel=\"preconnect\" href=\"//api.x.com\" /><link rel=\"dns-prefetch\" href=\"//api.x.com\" /><link rel=\"preconne",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_008",
+      "scenario": "anti_scrape",
+      "url": "https://www.tiktok.com/@tiktok",
+      "timestamp": "2026-04-17T02:36:56.780037",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 686.7949962615967,
+          "status_code": 200,
+          "content_length": 313113,
+          "content_preview": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>TikTok - Make Your Day</title>\n    <link rel=\"preload\" as=\"script\" href=\"https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.368/webmssdk.js\"></link><script type=\"application/json\" id=\"pumbaa-rule\">{\"_r\":\"eyJjb29raWUiOnsiYmxvY2tlcnMiOlt7ImNvb2tpZXMiOlsia3RsdkRXN0lHNUNsT2N4WVRibVkiLCJNT05JVE9SX0RFVklD",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_009",
+      "scenario": "anti_scrape",
+      "url": "https://medium.com/search?q=artificial+intelligence",
+      "timestamp": "2026-04-17T02:36:56.927032",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 146.92068099975586,
+          "status_code": 200,
+          "content_length": 7283,
+          "content_preview": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helve",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_010",
+      "scenario": "anti_scrape",
+      "url": "https://www.reddit.com/search/?q=python+programming&type=posts",
+      "timestamp": "2026-04-17T02:36:57.021010",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 93.94454956054688,
+          "status_code": 200,
+          "content_length": 8373,
+          "content_preview": "\n  <!DOCTYPE html>\n  <html lang=\"en\">\n    <head>\n      <meta charset=\"UTF-8\" />\n      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n      <link href=\"https://www.redditstatic.com/shreddit/assets/favicon/64x64.png\" rel=\"icon shortcut\" sizes=\"64x64\" />\n      <title>Reddit - Please wait for verification</title>\n      <script nonce=\"a97af4b7-38d0-448d-8138-6c68393349d0\">\n        document.addEventListener(\"DOMContentLoaded\",async function(){var e=document.forms[0],n=(e.onsu",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_011",
+      "scenario": "anti_scrape",
+      "url": "https://www.linkedin.com/in/williamhgates/",
+      "timestamp": "2026-04-17T02:36:58.354547",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1332.9503536224365,
+          "status_code": 200,
+          "content_length": 679501,
+          "content_preview": "<!DOCTYPE html>\n\n    \n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"public_profile_v3_desktop\">\n          \n    <meta name=\"robots\" content=\"max-image-preview:large, noarchive\">\n    <meta name=\"bingbot\" content=\"max-image-preview:large, archive\">\n  \n<!---->          <meta name=\"linkedin:pageTag\" content=\"openToProvider\">\n        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.0.4385\" ",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S2_012",
+      "scenario": "anti_scrape",
+      "url": "https://x.com/search?q=AI&src=typed_query",
+      "timestamp": "2026-04-17T02:36:59.937451",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1582.798957824707,
+          "status_code": 200,
+          "content_length": 247526,
+          "content_preview": "<!DOCTYPE html><html dir=\"ltr\" lang=\"en\"><head><meta charset=\"utf-8\" /><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover\" /><link rel=\"preconnect\" href=\"//abs.twimg.com\" /><link rel=\"dns-prefetch\" href=\"//abs.twimg.com\" /><link rel=\"preconnect\" href=\"//api.twitter.com\" /><link rel=\"dns-prefetch\" href=\"//api.twitter.com\" /><link rel=\"preconnect\" href=\"//api.x.com\" /><link rel=\"dns-prefetch\" href=\"//api.x.com\" /><link rel=\"preconne",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S3_001",
+      "scenario": "platform",
+      "url": "bilibili hot",
+      "timestamp": "2026-04-17T02:36:59.970376",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 6.588935852050781,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 26.226282119750977,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S3_002",
+      "scenario": "platform",
+      "url": "zhihu hot",
+      "timestamp": "2026-04-17T02:36:59.984714",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 3.324270248413086,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 10.944128036499023,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S3_003",
+      "scenario": "platform",
+      "url": "weibo hot",
+      "timestamp": "2026-04-17T02:36:59.994395",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.160310745239258,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 7.4825286865234375,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S3_004",
+      "scenario": "platform",
+      "url": "https://www.bilibili.com/video/BV1GJ411x7h7",
+      "timestamp": "2026-04-17T02:37:01.222510",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.040386199951172,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 1226.022720336914,
+          "error": "'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte",
+          "notes": "HTTP直接抓取失败"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S3_005",
+      "scenario": "platform",
+      "url": "https://www.zhihu.com/question/580000000",
+      "timestamp": "2026-04-17T02:37:01.911717",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.2509098052978516,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 686.8906021118164,
+          "status_code": 200,
+          "content_length": 584,
+          "content_preview": "    <!DOCTYPE html><html lang=\"en\"><head><meta id=\"zh-zse-ck\" charset=\"UTF-8\" content=\"22fcsM4ZIW3+TXaa92jjg0wMeGbFXMB5cfrq/WYfIAE9e5/8gfyi2WKFMHhnZtTQm8nxnUIxhd/lUCTRyugGePiJvufQDr9Z5JklO0/VimSW5euZ3dVdbMTkMWv2DJeu\"></head><body><div style=\"color:#535861;opacity: 0.1;display: flex;justify-content: center;\">知乎，让每一次点击都充满意义 —— 欢迎来到知乎，发现问题背后的世界。</div><script data-assets-tracker-config='{\"appName\":\"zse_ck\",\"trackJSRuntimeError\":true}' crossorigin=\"\" src=\"https://static.zhihu.com/zse-ck/v4/c02872cfa5",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": true
+    },
+    {
+      "test_id": "S3_006",
+      "scenario": "platform",
+      "url": "https://weibo.com/u/1234567890",
+      "timestamp": "2026-04-17T02:37:03.902094",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 4.601001739501953,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 1985.6278896331787,
+          "error": "'utf-8' codec can't decode byte 0xca in position 410: invalid continuation byte",
+          "notes": "HTTP直接抓取失败"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S3_007",
+      "scenario": "platform",
+      "url": "xiaohongshu hot",
+      "timestamp": "2026-04-17T02:37:03.922954",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 4.534721374511719,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 16.232013702392578,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S3_008",
+      "scenario": "platform",
+      "url": "douyin hot",
+      "timestamp": "2026-04-17T02:37:03.934243",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.230405807495117,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 9.007930755615234,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S3_009",
+      "scenario": "platform",
+      "url": "https://www.xiaohongshu.com/explore",
+      "timestamp": "2026-04-17T02:37:04.565036",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.1805763244628906,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 628.5445690155029,
+          "status_code": 200,
+          "content_length": 536167,
+          "content_preview": "<!doctype html><html><head><script formula-runtime >function e(e){for(var r=1;r<arguments.length;r++){var t=null!=arguments[r]?arguments[r]:{},n=Object.keys(t);\"function\"==typeof Object.getOwnPropertySymbols&&(n=n.concat(Object.getOwnPropertySymbols(t).filter(function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable}))),n.forEach(function(r){var n;n=t[r],r in e?Object.defineProperty(e,r,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[r]=n})}return e}function r(e,r){return r=null!",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": true
+    },
+    {
+      "test_id": "S3_010",
+      "scenario": "platform",
+      "url": "weibo search AI",
+      "timestamp": "2026-04-17T02:37:04.593616",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 4.388570785522461,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 24.094820022583008,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S3_011",
+      "scenario": "platform",
+      "url": "https://twitter.com/search?q=AI",
+      "timestamp": "2026-04-17T02:37:06.053078",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 3.1194686889648438,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1456.2509059906006,
+          "status_code": 200,
+          "content_length": 247526,
+          "content_preview": "<!DOCTYPE html><html dir=\"ltr\" lang=\"en\"><head><meta charset=\"utf-8\" /><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover\" /><link rel=\"preconnect\" href=\"//abs.twimg.com\" /><link rel=\"dns-prefetch\" href=\"//abs.twimg.com\" /><link rel=\"preconnect\" href=\"//api.twitter.com\" /><link rel=\"dns-prefetch\" href=\"//api.twitter.com\" /><link rel=\"preconnect\" href=\"//api.x.com\" /><link rel=\"dns-prefetch\" href=\"//api.x.com\" /><link rel=\"preconne",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": true
+    },
+    {
+      "test_id": "S3_012",
+      "scenario": "platform",
+      "url": "zhihu search 人工智能",
+      "timestamp": "2026-04-17T02:37:06.085999",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 4.609346389770508,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 28.20563316345215,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S4_001",
+      "scenario": "spa",
+      "url": "https://react.dev",
+      "timestamp": "2026-04-17T02:37:06.284627",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 198.54497909545898,
+          "status_code": 200,
+          "content_length": 272441,
+          "content_preview": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\"><head><meta charSet=\"utf-8\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" data-next-head=\"\"/><script async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-B1E83PJ3RT\"></script><title data-next-head=\"\">React</title><meta name=\"description\" content=\"React is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript. React is designed t",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_002",
+      "scenario": "spa",
+      "url": "https://vuejs.org",
+      "timestamp": "2026-04-17T02:37:06.659530",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 374.82333183288574,
+          "status_code": 200,
+          "content_length": 83072,
+          "content_preview": "<!DOCTYPE html>\n<html lang=\"en-US\" dir=\"ltr\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n    <title>Vue.js - The Progressive JavaScript Framework | Vue.js</title>\n    <meta name=\"description\" content=\"Vue.js - The Progressive JavaScript Framework\">\n    <meta name=\"generator\" content=\"VitePress v2.0.0-alpha.17\">\n    <link rel=\"preload stylesheet\" href=\"/assets/style.DZ54IrWP.css\" as=\"style\">\n    <link rel=\"preload stylesheet\" href=\"",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_003",
+      "scenario": "spa",
+      "url": "https://angular.io",
+      "timestamp": "2026-04-17T02:37:07.953680",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1294.1129207611084,
+          "status_code": 200,
+          "content_length": 98469,
+          "content_preview": "<!DOCTYPE html><!-- We set all theme classes to allow critters to inline the theme styles and prevent flickering --><html lang=\"en\" class=\"docs-dark-mode docs-light-mode\" data-beasties-container><head>\n    <script>\n      // This logic must execute early, so that we set the necessary\n      // CSS classes to the document node and avoid unstyled content\n      // from appearing on the page.\n      const THEME_PREFERENCE_LOCAL_STORAGE_KEY = 'themePreference';\n      const DARK_MODE_CLASS_NAME = 'docs-d",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_004",
+      "scenario": "spa",
+      "url": "https://nextjs.org/docs",
+      "timestamp": "2026-04-17T02:37:08.796346",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 842.6046371459961,
+          "status_code": 200,
+          "content_length": 804280,
+          "content_preview": "<!DOCTYPE html><html data-dpl-id=\"dpl_FpqsbXyKwxYGjHk3ackVC7WkisDU\" class=\"geist_mono_a9c52c80-module__Zl6iEq__className geist_1620151b-module__2VSEvG__className geist_mono_a9c52c80-module__Zl6iEq__variable geist_1620151b-module__2VSEvG__variable\" lang=\"en\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"preload\" as=\"image\" href=\"/_next/static/media/logo-bluesky-dark.1vnxp7olsp0zg.svg?dpl=dpl_FpqsbXyKwxYGjHk3ackVC7WkisDU\"/><link rel=\"s",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_005",
+      "scenario": "spa",
+      "url": "https://nuxt.com/docs",
+      "timestamp": "2026-04-17T02:37:09.052514",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 256.09278678894043,
+          "status_code": 200,
+          "content_length": 124,
+          "content_preview": "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=/docs/4.x/getting-started/introduction\"></head></html>",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_006",
+      "scenario": "spa",
+      "url": "https://svelte.dev",
+      "timestamp": "2026-04-17T02:37:09.246590",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 194.02217864990234,
+          "status_code": 200,
+          "content_length": 89555,
+          "content_preview": "<!doctype html>\n<html lang=\"en\" class=\"theme-default typo-default\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n\t\t<meta name=\"theme-color\" content=\"#ff3e00\" />\n\n\t\t<link rel=\"manifest\" href=\"/manifest.json\" />\n\t\t<link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\" />\n\n\t\t<meta name=\"twitter:site\" content=\"@sveltejs\" />\n\t\t<meta name=\"twitter:creator\" content=\"@sveltejs\" />\n\n\t\t<link\n\t\t\trel=\"search\"\n\t\t\ttype=\"application/opensearchdescrip",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_007",
+      "scenario": "spa",
+      "url": "https://dashboard.stripe.com",
+      "timestamp": "2026-04-17T02:37:10.179142",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 932.4851036071777,
+          "status_code": 200,
+          "content_length": 132303,
+          "content_preview": "<!DOCTYPE html>\n<html data-bootstrap=\"login_app\" lang=\"en-US\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Stripe Login | Sign in to the Stripe Dashboard</title>\n    <meta name=\"viewport\" content=\"width=device-width\">\n      <meta name=\"description\" content=\"Sign in to the Stripe Dashboard to manage business payments and operations in your account. Manage payments and refunds, respond to disputes and more.\">\n\n          <link rel=\"alternate\" hreflang=\"de-DE\" href=\"https://dashboard.stripe.com/l",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_008",
+      "scenario": "spa",
+      "url": "https://vercel.com/dashboard",
+      "timestamp": "2026-04-17T02:37:10.906490",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 727.2849082946777,
+          "status_code": 200,
+          "content_length": 238731,
+          "content_preview": "<!DOCTYPE html><html data-dpl-id=\"dpl_14e6WBoZJvsG58jtiKE84QfBxHqL\" class=\"tailwind tailwind-preflight geist_mono_98cac566-module__bcNCwW__className geist_1620151b-module__2VSEvG__className geist_mono_98cac566-module__bcNCwW__variable geist_1620151b-module__2VSEvG__variable dash\" lang=\"en-US\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/32sx7tb4mc7ub.css?dpl=dpl_14e6WBoZJvsG58j",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_009",
+      "scenario": "spa",
+      "url": "https://linear.app",
+      "timestamp": "2026-04-17T02:37:11.794274",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 887.4013423919678,
+          "status_code": 200,
+          "content_length": 2296104,
+          "content_preview": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=1, viewport-fit=cover\"/><link rel=\"preload\" href=\"https://static.linear.app/fonts/InterVariable.woff2?v=4.1\" as=\"font\" crossorigin=\"anonymous\" type=\"font/woff2\"/><link rel=\"preload\" as=\"image\" href=\"https://webassets.linear.app/images/ornj730p/production/f79251b06e9edeeacbf2875384defe629e000b3c-352x352.png?w=72&amp;q=95&amp;auto=form",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_010",
+      "scenario": "spa",
+      "url": "https://notion.so",
+      "timestamp": "2026-04-17T02:37:13.130451",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1336.1122608184814,
+          "status_code": 200,
+          "content_length": 264164,
+          "content_preview": "<!DOCTYPE html><html class=\"base_theme__K5IIh\" lang=\"en-us\"><head><meta charSet=\"utf-8\"/><script id=\"airgap-stub\">window.airgap = window.airgap || {}; window.airgap.readyQueue = window.airgap.readyQueue || [];</script><script id=\"tcf-stub\">\n(function () {\n\tif (typeof window.__tcfapi !== 'function') {\n\t\tconst queue = [];\n\t\twindow.__tcfapi = function (command, version, callback, parameter) {\n\t\t\tif (!command) return queue;\n\t\t\tif (command === 'setGdprApplies' && version === 2 && typeof parameter ===",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_011",
+      "scenario": "spa",
+      "url": "https://figma.com/files",
+      "timestamp": "2026-04-17T02:37:14.387900",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1257.3652267456055,
+          "status_code": 200,
+          "content_length": 157949,
+          "content_preview": "<!DOCTYPE html>\n<html lang=\"en\" data-product-locale=\"en\">\n  <head>\n    <script nonce=\"17g&#47;VQRQiDHVxI2+WVBAJQ==\">performance.mark('figma:bootstrap:preload-start-http')</script>\n\n    <meta charset=\"utf-8\">\n\n    <meta name=\"entrypoint_variant\" content=\"auth\" />\n\n\n    \n      <script nonce=\"17g/VQRQiDHVxI2+WVBAJQ==\">\n        function isSupportedBrowser() {\n          const isCSSLayerSupported = typeof CSSLayerBlockRule !== 'undefined'\n\n          let isIntlListFormatSupported = true\n          try {",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S4_012",
+      "scenario": "spa",
+      "url": "https://discord.com/app",
+      "timestamp": "2026-04-17T02:37:14.524265",
+      "expected_tool": "browser",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 136.3241672515869,
+          "status_code": 200,
+          "content_length": 5912,
+          "content_preview": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta content=\"width=device-width, initial-scale=1.0, maximum-scale=3.0\" name=\"viewport\">\n\n    <!-- section:seometa -->\n    <meta property=\"og:type\" content=\"website\">\n    <meta property=\"og:site_name\" content=\"Discord\">\n    <meta property=\"og:title\" content=\"Discord - Group Chat That’s All Fun &amp; Games\">\n    <meta property=\"og:description\" content=\"Discord is great for playing games and chilling with friends, or even building a wor",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_001",
+      "scenario": "search",
+      "url": "what are AI agents",
+      "timestamp": "2026-04-17T02:37:14.601917",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 77.60930061340332,
+          "output_length": 396,
+          "output_preview": "🔍 智能搜索: what are AI agents\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_002",
+      "scenario": "search",
+      "url": "Python tutorial for beginners",
+      "timestamp": "2026-04-17T02:37:14.660926",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 58.97378921508789,
+          "output_length": 407,
+          "output_preview": "🔍 智能搜索: Python tutorial for beginners\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_003",
+      "scenario": "search",
+      "url": "machine learning vs deep learning",
+      "timestamp": "2026-04-17T02:37:14.719516",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 58.556318283081055,
+          "output_length": 411,
+          "output_preview": "🔍 智能搜索: machine learning vs deep learning\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_004",
+      "scenario": "search",
+      "url": "best practices for REST API design",
+      "timestamp": "2026-04-17T02:37:14.779125",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 59.56244468688965,
+          "output_length": 412,
+          "output_preview": "🔍 智能搜索: best practices for REST API design\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_005",
+      "scenario": "search",
+      "url": "how does transformer architecture work",
+      "timestamp": "2026-04-17T02:37:14.837367",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 58.20775032043457,
+          "output_length": 416,
+          "output_preview": "🔍 智能搜索: how does transformer architecture work\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_006",
+      "scenario": "search",
+      "url": "OpenClaw framework features",
+      "timestamp": "2026-04-17T02:37:14.895774",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 58.373212814331055,
+          "output_length": 405,
+          "output_preview": "🔍 智能搜索: OpenClaw framework features\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_007",
+      "scenario": "search",
+      "url": "Docker vs Kubernetes differences",
+      "timestamp": "2026-04-17T02:37:14.958733",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 62.924861907958984,
+          "output_length": 410,
+          "output_preview": "🔍 智能搜索: Docker vs Kubernetes differences\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_008",
+      "scenario": "search",
+      "url": "Rust programming language benefits",
+      "timestamp": "2026-04-17T02:37:15.018138",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 59.366703033447266,
+          "output_length": 412,
+          "output_preview": "🔍 智能搜索: Rust programming language benefits\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_009",
+      "scenario": "search",
+      "url": "vector database comparison 2026",
+      "timestamp": "2026-04-17T02:37:15.076378",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 58.20727348327637,
+          "output_length": 409,
+          "output_preview": "🔍 智能搜索: vector database comparison 2026\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_010",
+      "scenario": "search",
+      "url": "GPT-5 release date rumors",
+      "timestamp": "2026-04-17T02:37:15.135013",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 58.60114097595215,
+          "output_length": 403,
+          "output_preview": "🔍 智能搜索: GPT-5 release date rumors\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_011",
+      "scenario": "search",
+      "url": "TypeScript interface vs type",
+      "timestamp": "2026-04-17T02:37:15.194509",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 59.462547302246094,
+          "output_length": 406,
+          "output_preview": "🔍 智能搜索: TypeScript interface vs type\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S5_012",
+      "scenario": "search",
+      "url": "React hooks best practices 2026",
+      "timestamp": "2026-04-17T02:37:15.253554",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "search",
+          "success": true,
+          "duration_ms": 59.01217460632324,
+          "output_length": 409,
+          "output_preview": "🔍 智能搜索: React hooks best practices 2026\n📍 检测场景: search (置信度: 0.90)\n🛠️  工具链: ['brave', 'tavily', 'google']\n  → 尝试: brave (优先级 1)\n  ❌ 错误: brave - BRAVE_API_KEY 未设置\n  → 尝试: tavily (优先级 2)\n  ❌ 错误: tavily - TAVILY_API_KEY 未设置\n  → 尝试: google (优先级 3)\n  ✅ 成功: google\n\n============================================================\n搜索结果\n============================================================\n场景: search\n工具: google\n",
+          "error": null,
+          "notes": "Search API"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S6_001",
+      "scenario": "realtime",
+      "url": "https://wttr.in/Sydney?format=j1",
+      "timestamp": "2026-04-17T02:37:17.571399",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 2317.802667617798,
+          "status_code": 200,
+          "content_length": 39598,
+          "content_preview": "{\n  \"current_condition\": [\n    {\n      \"FeelsLikeC\": \"26\",\n      \"FeelsLikeF\": \"79\",\n      \"cloudcover\": \"0\",\n      \"humidity\": \"28\",\n      \"localObsDateTime\": \"2026-04-17 12:15 PM\",\n      \"observation_time\": \"02:15 AM\",\n      \"precipInches\": \"0.0\",\n      \"precipMM\": \"0.0\",\n      \"pressure\": \"1012\",\n      \"pressureInches\": \"30\",\n      \"temp_C\": \"26\",\n      \"temp_F\": \"79\",\n      \"uvIndex\": \"5\",\n      \"visibility\": \"10\",\n      \"visibilityMiles\": \"6\",\n      \"weatherCode\": \"116\",\n      \"weatherDesc\"",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S6_002",
+      "scenario": "realtime",
+      "url": "今天天气怎么样",
+      "timestamp": "2026-04-17T02:37:17.606863",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 32.06658363342285,
+          "status_code": 6,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        },
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 3.326416015625,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S6_003",
+      "scenario": "realtime",
+      "url": "weather in New York",
+      "timestamp": "2026-04-17T02:37:17.635926",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 24.806499481201172,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        },
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 4.169464111328125,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S6_004",
+      "scenario": "realtime",
+      "url": "https://wttr.in/London?format=j1",
+      "timestamp": "2026-04-17T02:37:20.686707",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 3050.7068634033203,
+          "status_code": 200,
+          "content_length": 39542,
+          "content_preview": "{\n  \"current_condition\": [\n    {\n      \"FeelsLikeC\": \"10\",\n      \"FeelsLikeF\": \"51\",\n      \"cloudcover\": \"100\",\n      \"humidity\": \"87\",\n      \"localObsDateTime\": \"2026-04-17 03:15 AM\",\n      \"observation_time\": \"02:15 AM\",\n      \"precipInches\": \"0.0\",\n      \"precipMM\": \"0.1\",\n      \"pressure\": \"1019\",\n      \"pressureInches\": \"30\",\n      \"temp_C\": \"11\",\n      \"temp_F\": \"52\",\n      \"uvIndex\": \"0\",\n      \"visibility\": \"10\",\n      \"visibilityMiles\": \"6\",\n      \"weatherCode\": \"122\",\n      \"weatherDes",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": true,
+      "fallback_triggered": false,
+      "final_success": true
+    },
+    {
+      "test_id": "S6_005",
+      "scenario": "realtime",
+      "url": "最新热搜",
+      "timestamp": "2026-04-17T02:37:20.722383",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.3703575134277344,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 33.25009346008301,
+          "status_code": 6,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S6_006",
+      "scenario": "realtime",
+      "url": "current trending twitter",
+      "timestamp": "2026-04-17T02:37:20.738211",
+      "expected_tool": "search",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 3.724336624145508,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 12.024879455566406,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S6_007",
+      "scenario": "realtime",
+      "url": "https://api.exchangerate-api.com/v4/latest/USD",
+      "timestamp": "2026-04-17T02:37:21.863825",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.049684524536133,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": true,
+          "duration_ms": 1123.5003471374512,
+          "status_code": 200,
+          "content_length": 2215,
+          "content_preview": "{\"provider\":\"https://www.exchangerate-api.com\",\"WARNING_UPGRADE_TO_V6\":\"https://www.exchangerate-api.com/docs/free\",\"terms\":\"https://www.exchangerate-api.com/terms\",\"base\":\"USD\",\"date\":\"2026-04-17\",\"time_last_updated\":1776384001,\"rates\":{\"USD\":1,\"AED\":3.67,\"AFN\":64.41,\"ALL\":81.26,\"AMD\":374.31,\"ANG\":1.79,\"AOA\":924.6,\"ARS\":1352.98,\"AUD\":1.4,\"AWG\":1.79,\"AZN\":1.7,\"BAM\":1.66,\"BBD\":2,\"BDT\":122.91,\"BGN\":1.66,\"BHD\":0.376,\"BIF\":2977.81,\"BMD\":1,\"BND\":1.27,\"BOB\":6.91,\"BRL\":4.99,\"BSD\":1,\"BTN\":93.25,\"BWP\":13",
+          "error": null,
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": true
+    },
+    {
+      "test_id": "S6_008",
+      "scenario": "realtime",
+      "url": "悉尼今天天气",
+      "timestamp": "2026-04-17T02:37:21.897344",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 29.806852340698242,
+          "status_code": 6,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        },
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 3.6554336547851562,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S6_009",
+      "scenario": "realtime",
+      "url": "weather forecast Tokyo",
+      "timestamp": "2026-04-17T02:37:21.911480",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 12.02082633972168,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        },
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.0482540130615234,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S6_010",
+      "scenario": "realtime",
+      "url": "weibo trending today",
+      "timestamp": "2026-04-17T02:37:21.920126",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 0.9126663208007812,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 7.692813873291016,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S6_011",
+      "scenario": "realtime",
+      "url": "bilibili trending now",
+      "timestamp": "2026-04-17T02:37:21.930088",
+      "expected_tool": "opencli",
+      "tool_sequence": [
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.1615028381347656,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        },
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 7.76219367980957,
+          "status_code": 3,
+          "content_length": 0,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    },
+    {
+      "test_id": "S6_012",
+      "scenario": "realtime",
+      "url": "https://wttr.in/?format=4",
+      "timestamp": "2026-04-17T02:37:22.927790",
+      "expected_tool": "web_fetch",
+      "tool_sequence": [
+        {
+          "tool": "web_fetch",
+          "success": false,
+          "duration_ms": 995.2812194824219,
+          "status_code": 403,
+          "content_length": 52,
+          "content_preview": null,
+          "error": "",
+          "notes": "HTTP直接抓取"
+        },
+        {
+          "tool": "opencli",
+          "success": false,
+          "duration_ms": 2.3813247680664062,
+          "output_length": 0,
+          "output_preview": null,
+          "error": "/usr/bin/env: ‘node’: No such file or directory\n",
+          "notes": "opencli CLI"
+        }
+      ],
+      "primary_tool_success": false,
+      "fallback_triggered": true,
+      "final_success": false
+    }
+  ]
+}
