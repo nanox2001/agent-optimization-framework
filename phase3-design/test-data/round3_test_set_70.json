@@ -1,0 +1,584 @@
+{
+  "version": "3.0",
+  "description": "Phase 3 Round 3 - Real Environment Test Set (70+ URLs/Queries)",
+  "created_at": "2026-04-17",
+  "total_tests": 72,
+  "test_cases": [
+    {
+      "id": "S1_001",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://news.ycombinator.com",
+      "expected_tool": "web_fetch",
+      "description": "Hacker News - simple static HTML"
+    },
+    {
+      "id": "S1_002",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://example.com",
+      "expected_tool": "web_fetch",
+      "description": "Example domain - minimal static page"
+    },
+    {
+      "id": "S1_003",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://httpbin.org/html",
+      "expected_tool": "web_fetch",
+      "description": "HTTPBin HTML test page"
+    },
+    {
+      "id": "S1_004",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://docs.python.org/3/tutorial/",
+      "expected_tool": "web_fetch",
+      "description": "Python docs - documentation site"
+    },
+    {
+      "id": "S1_005",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://github.com/torvalds/linux",
+      "expected_tool": "web_fetch",
+      "description": "GitHub repo page"
+    },
+    {
+      "id": "S1_006",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://www.w3schools.com/html/",
+      "expected_tool": "web_fetch",
+      "description": "W3Schools tutorial"
+    },
+    {
+      "id": "S1_007",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://dbreunig.com/2026/04/14/cybersecurity-is-proof-of-work-now.html",
+      "expected_tool": "web_fetch",
+      "description": "Personal blog post"
+    },
+    {
+      "id": "S1_008",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://theleo.zone/posts/pager/",
+      "expected_tool": "web_fetch",
+      "description": "Tech blog post"
+    },
+    {
+      "id": "S1_009",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://github.com/microsoft/vscode",
+      "expected_tool": "web_fetch",
+      "description": "VS Code GitHub repo"
+    },
+    {
+      "id": "S1_010",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://github.com/facebook/react",
+      "expected_tool": "web_fetch",
+      "description": "React GitHub repo"
+    },
+    {
+      "id": "S1_011",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://www.reuters.com/technology/",
+      "expected_tool": "web_fetch",
+      "description": "Reuters tech news"
+    },
+    {
+      "id": "S1_012",
+      "scenario": "static",
+      "type": "url",
+      "input": "https://arstechnica.com/",
+      "expected_tool": "web_fetch",
+      "description": "Ars Technica"
+    },
+    {
+      "id": "S2_001",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://medium.com/@anthropics/mythos-security-assessment",
+      "expected_tool": "browser",
+      "description": "Medium article"
+    },
+    {
+      "id": "S2_002",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://www.reddit.com/r/MachineLearning/",
+      "expected_tool": "browser",
+      "description": "Reddit Machine Learning subreddit"
+    },
+    {
+      "id": "S2_003",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://www.reddit.com/r/programming/",
+      "expected_tool": "browser",
+      "description": "Reddit Programming subreddit"
+    },
+    {
+      "id": "S2_004",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://medium.com/@tech/understanding-llms",
+      "expected_tool": "browser",
+      "description": "Medium tech article (placeholder)"
+    },
+    {
+      "id": "S2_005",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://www.linkedin.com/pulse/ai-trends-2026",
+      "expected_tool": "browser",
+      "description": "LinkedIn article (placeholder)"
+    },
+    {
+      "id": "S2_006",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://www.instagram.com/taylorswift/",
+      "expected_tool": "browser",
+      "description": "Instagram profile"
+    },
+    {
+      "id": "S2_007",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://x.com/elonmusk/",
+      "expected_tool": "browser",
+      "description": "X (Twitter) profile"
+    },
+    {
+      "id": "S2_008",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://www.tiktok.com/@tiktok",
+      "expected_tool": "browser",
+      "description": "TikTok profile"
+    },
+    {
+      "id": "S2_009",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://medium.com/search?q=artificial+intelligence",
+      "expected_tool": "browser",
+      "description": "Medium search results"
+    },
+    {
+      "id": "S2_010",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://www.reddit.com/search/?q=python+programming&type=posts",
+      "expected_tool": "browser",
+      "description": "Reddit search results"
+    },
+    {
+      "id": "S2_011",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://www.linkedin.com/in/williamhgates/",
+      "expected_tool": "browser",
+      "description": "LinkedIn profile"
+    },
+    {
+      "id": "S2_012",
+      "scenario": "anti_scrape",
+      "type": "url",
+      "input": "https://x.com/search?q=AI&src=typed_query",
+      "expected_tool": "browser",
+      "description": "X search results"
+    },
+    {
+      "id": "S3_001",
+      "scenario": "platform",
+      "type": "query",
+      "input": "bilibili hot",
+      "expected_tool": "opencli",
+      "description": "Bilibili hot topics"
+    },
+    {
+      "id": "S3_002",
+      "scenario": "platform",
+      "type": "query",
+      "input": "zhihu hot",
+      "expected_tool": "opencli",
+      "description": "Zhihu hot topics"
+    },
+    {
+      "id": "S3_003",
+      "scenario": "platform",
+      "type": "query",
+      "input": "weibo hot",
+      "expected_tool": "opencli",
+      "description": "Weibo hot topics"
+    },
+    {
+      "id": "S3_004",
+      "scenario": "platform",
+      "type": "url",
+      "input": "https://www.bilibili.com/video/BV1GJ411x7h7",
+      "expected_tool": "opencli",
+      "description": "Bilibili video page"
+    },
+    {
+      "id": "S3_005",
+      "scenario": "platform",
+      "type": "url",
+      "input": "https://www.zhihu.com/question/580000000",
+      "expected_tool": "opencli",
+      "description": "Zhihu question page"
+    },
+    {
+      "id": "S3_006",
+      "scenario": "platform",
+      "type": "url",
+      "input": "https://weibo.com/u/1234567890",
+      "expected_tool": "opencli",
+      "description": "Weibo user page"
+    },
+    {
+      "id": "S3_007",
+      "scenario": "platform",
+      "type": "query",
+      "input": "xiaohongshu hot",
+      "expected_tool": "opencli",
+      "description": "Xiaohongshu hot topics"
+    },
+    {
+      "id": "S3_008",
+      "scenario": "platform",
+      "type": "query",
+      "input": "douyin hot",
+      "expected_tool": "opencli",
+      "description": "Douyin hot topics"
+    },
+    {
+      "id": "S3_009",
+      "scenario": "platform",
+      "type": "url",
+      "input": "https://www.xiaohongshu.com/explore",
+      "expected_tool": "opencli",
+      "description": "Xiaohongshu explore page"
+    },
+    {
+      "id": "S3_010",
+      "scenario": "platform",
+      "type": "query",
+      "input": "weibo search AI",
+      "expected_tool": "opencli",
+      "description": "Weibo search for AI"
+    },
+    {
+      "id": "S3_011",
+      "scenario": "platform",
+      "type": "url",
+      "input": "https://twitter.com/search?q=AI",
+      "expected_tool": "opencli",
+      "description": "Twitter search via opencli"
+    },
+    {
+      "id": "S3_012",
+      "scenario": "platform",
+      "type": "query",
+      "input": "zhihu search 人工智能",
+      "expected_tool": "opencli",
+      "description": "Zhihu search for AI"
+    },
+    {
+      "id": "S4_001",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://react.dev",
+      "expected_tool": "browser",
+      "description": "React documentation SPA"
+    },
+    {
+      "id": "S4_002",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://vuejs.org",
+      "expected_tool": "browser",
+      "description": "Vue.js documentation SPA"
+    },
+    {
+      "id": "S4_003",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://angular.io",
+      "expected_tool": "browser",
+      "description": "Angular documentation SPA"
+    },
+    {
+      "id": "S4_004",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://nextjs.org/docs",
+      "expected_tool": "browser",
+      "description": "Next.js documentation"
+    },
+    {
+      "id": "S4_005",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://nuxt.com/docs",
+      "expected_tool": "browser",
+      "description": "Nuxt.js documentation"
+    },
+    {
+      "id": "S4_006",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://svelte.dev",
+      "expected_tool": "browser",
+      "description": "Svelte documentation SPA"
+    },
+    {
+      "id": "S4_007",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://dashboard.stripe.com",
+      "expected_tool": "browser",
+      "description": "Stripe dashboard (requires auth)"
+    },
+    {
+      "id": "S4_008",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://vercel.com/dashboard",
+      "expected_tool": "browser",
+      "description": "Vercel dashboard SPA"
+    },
+    {
+      "id": "S4_009",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://linear.app",
+      "expected_tool": "browser",
+      "description": "Linear project management SPA"
+    },
+    {
+      "id": "S4_010",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://notion.so",
+      "expected_tool": "browser",
+      "description": "Notion web app"
+    },
+    {
+      "id": "S4_011",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://figma.com/files",
+      "expected_tool": "browser",
+      "description": "Figma web app"
+    },
+    {
+      "id": "S4_012",
+      "scenario": "spa",
+      "type": "url",
+      "input": "https://discord.com/app",
+      "expected_tool": "browser",
+      "description": "Discord web app"
+    },
+    {
+      "id": "S5_001",
+      "scenario": "search",
+      "type": "query",
+      "input": "what are AI agents",
+      "expected_tool": "search",
+      "description": "General AI question"
+    },
+    {
+      "id": "S5_002",
+      "scenario": "search",
+      "type": "query",
+      "input": "Python tutorial for beginners",
+      "expected_tool": "search",
+      "description": "Programming tutorial search"
+    },
+    {
+      "id": "S5_003",
+      "scenario": "search",
+      "type": "query",
+      "input": "machine learning vs deep learning",
+      "expected_tool": "search",
+      "description": "Technical comparison"
+    },
+    {
+      "id": "S5_004",
+      "scenario": "search",
+      "type": "query",
+      "input": "best practices for REST API design",
+      "expected_tool": "search",
+      "description": "API design question"
+    },
+    {
+      "id": "S5_005",
+      "scenario": "search",
+      "type": "query",
+      "input": "how does transformer architecture work",
+      "expected_tool": "search",
+      "description": "Deep learning architecture"
+    },
+    {
+      "id": "S5_006",
+      "scenario": "search",
+      "type": "query",
+      "input": "OpenClaw framework features",
+      "expected_tool": "search",
+      "description": "Framework specific query"
+    },
+    {
+      "id": "S5_007",
+      "scenario": "search",
+      "type": "query",
+      "input": "Docker vs Kubernetes differences",
+      "expected_tool": "search",
+      "description": "DevOps tools comparison"
+    },
+    {
+      "id": "S5_008",
+      "scenario": "search",
+      "type": "query",
+      "input": "Rust programming language benefits",
+      "expected_tool": "search",
+      "description": "Programming language info"
+    },
+    {
+      "id": "S5_009",
+      "scenario": "search",
+      "type": "query",
+      "input": "vector database comparison 2026",
+      "expected_tool": "search",
+      "description": "Database technology search"
+    },
+    {
+      "id": "S5_010",
+      "scenario": "search",
+      "type": "query",
+      "input": "GPT-5 release date rumors",
+      "expected_tool": "search",
+      "description": "AI news search"
+    },
+    {
+      "id": "S5_011",
+      "scenario": "search",
+      "type": "query",
+      "input": "TypeScript interface vs type",
+      "expected_tool": "search",
+      "description": "TypeScript specific"
+    },
+    {
+      "id": "S5_012",
+      "scenario": "search",
+      "type": "query",
+      "input": "React hooks best practices 2026",
+      "expected_tool": "search",
+      "description": "Frontend development"
+    },
+    {
+      "id": "S6_001",
+      "scenario": "realtime",
+      "type": "url",
+      "input": "https://wttr.in/Sydney?format=j1",
+      "expected_tool": "web_fetch",
+      "description": "Weather API for Sydney"
+    },
+    {
+      "id": "S6_002",
+      "scenario": "realtime",
+      "type": "query",
+      "input": "今天天气怎么样",
+      "expected_tool": "web_fetch",
+      "description": "Chinese weather query"
+    },
+    {
+      "id": "S6_003",
+      "scenario": "realtime",
+      "type": "query",
+      "input": "weather in New York",
+      "expected_tool": "web_fetch",
+      "description": "English weather query"
+    },
+    {
+      "id": "S6_004",
+      "scenario": "realtime",
+      "type": "url",
+      "input": "https://wttr.in/London?format=j1",
+      "expected_tool": "web_fetch",
+      "description": "Weather API for London"
+    },
+    {
+      "id": "S6_005",
+      "scenario": "realtime",
+      "type": "query",
+      "input": "最新热搜",
+      "expected_tool": "opencli",
+      "description": "Hot trending topics CN"
+    },
+    {
+      "id": "S6_006",
+      "scenario": "realtime",
+      "type": "query",
+      "input": "current trending twitter",
+      "expected_tool": "search",
+      "description": "Trending topics EN"
+    },
+    {
+      "id": "S6_007",
+      "scenario": "realtime",
+      "type": "url",
+      "input": "https://api.exchangerate-api.com/v4/latest/USD",
+      "expected_tool": "web_fetch",
+      "description": "Exchange rates API"
+    },
+    {
+      "id": "S6_008",
+      "scenario": "realtime",
+      "type": "query",
+      "input": "悉尼今天天气",
+      "expected_tool": "web_fetch",
+      "description": "Sydney weather CN"
+    },
+    {
+      "id": "S6_009",
+      "scenario": "realtime",
+      "type": "query",
+      "input": "weather forecast Tokyo",
+      "expected_tool": "web_fetch",
+      "description": "Tokyo weather forecast"
+    },
+    {
+      "id": "S6_010",
+      "scenario": "realtime",
+      "type": "query",
+      "input": "weibo trending today",
+      "expected_tool": "opencli",
+      "description": "Weibo trending topics"
+    },
+    {
+      "id": "S6_011",
+      "scenario": "realtime",
+      "type": "query",
+      "input": "bilibili trending now",
+      "expected_tool": "opencli",
+      "description": "Bilibili trending"
+    },
+    {
+      "id": "S6_012",
+      "scenario": "realtime",
+      "type": "url",
+      "input": "https://wttr.in/?format=4",
+      "expected_tool": "web_fetch",
+      "description": "Current location weather"
+    }
+  ]
+}

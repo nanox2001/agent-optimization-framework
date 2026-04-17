@@ -1,0 +1,101 @@
+{
+  "experiment": "Phase 3: \u641c\u7d22\u5f15\u64ce\u4f18\u5148\u7ea7\u5bf9\u6bd4",
+  "timestamp": "2026-04-16T11:53:28.708420",
+  "control": {
+    "config": "Tavily\u4f18\u5148 \u2192 Brave \u2192 Google",
+    "rounds": 5,
+    "analysis": {
+      "total_queries": 25,
+      "successes": 25,
+      "success_rate": 100.0,
+      "avg_duration": 0.766,
+      "avg_fallback": 0.24,
+      "avg_quality": 3.96,
+      "total_credits": 30,
+      "by_category": {
+        "technical": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.0,
+          "total_credits": 5
+        },
+        "news": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.8,
+          "total_credits": 8
+        },
+        "realtime": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.2,
+          "total_credits": 6
+        },
+        "academic": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.0,
+          "total_credits": 5
+        },
+        "product": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.2,
+          "total_credits": 6
+        }
+      },
+      "engine_usage": {
+        "tavily": 20,
+        "brave": 4,
+        "google": 1
+      }
+    }
+  },
+  "treatment": {
+    "config": "Brave\u4f18\u5148 \u2192 Tavily \u2192 Google",
+    "rounds": 5,
+    "analysis": {
+      "total_queries": 25,
+      "successes": 25,
+      "success_rate": 100.0,
+      "avg_duration": 0.542,
+      "avg_fallback": 0.16,
+      "avg_quality": 4.04,
+      "total_credits": 28,
+      "by_category": {
+        "technical": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.0,
+          "total_credits": 5
+        },
+        "news": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.2,
+          "total_credits": 6
+        },
+        "realtime": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.4,
+          "total_credits": 6
+        },
+        "academic": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.2,
+          "total_credits": 6
+        },
+        "product": {
+          "success_rate": 100.0,
+          "avg_fallback": 0.0,
+          "total_credits": 5
+        }
+      },
+      "engine_usage": {
+        "brave": 22,
+        "tavily": 2,
+        "google": 1
+      }
+    }
+  },
+  "comparison": {
+    "success_rate_diff": 0.0,
+    "duration_diff": -0.224,
+    "fallback_diff": -0.08,
+    "quality_diff": 0.08,
+    "credits_diff": -2
+  }
+}

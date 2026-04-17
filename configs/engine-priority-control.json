@@ -1,0 +1,29 @@
+{
+  "name": "control_tavily_priority",
+  "description": "对照组：Tavily优先 → Brave → Google（当前策略）",
+  "engines": [
+    {
+      "name": "tavily",
+      "priority": 1,
+      "api_key_env": "TAVILY_API_KEY",
+      "enabled": true,
+      "min_credits": 100,
+      "credit_cost": 1
+    },
+    {
+      "name": "brave",
+      "priority": 2,
+      "api_key_env": "BRAVE_API_KEY",
+      "enabled": true,
+      "min_credits": 50,
+      "credit_cost": 1
+    },
+    {
+      "name": "google",
+      "priority": 3,
+      "enabled": true,
+      "min_credits": 0,
+      "credit_cost": 0
+    }
+  ]
+}

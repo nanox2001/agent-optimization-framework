@@ -1,0 +1,133 @@
+{
+  "variant": "control",
+  "round": 4,
+  "timestamp": "2026-04-16T11:53:25.197805",
+  "config_name": "control_tavily_priority",
+  "results": [
+    {
+      "success": true,
+      "engine_used": "tavily",
+      "fallback_count": 0,
+      "duration": 0.789,
+      "credits_used": 1,
+      "results_count": 3,
+      "has_answer": true,
+      "quality": 4,
+      "attempts": [
+        {
+          "engine": "tavily",
+          "success": true,
+          "duration": 0.789,
+          "credits_used": 1,
+          "results_count": 3,
+          "has_answer": true,
+          "quality": 4
+        }
+      ],
+      "query_id": "tech_1",
+      "category": "technical",
+      "query": "how to optimize asyncio performance python",
+      "best_engine": "tavily"
+    },
+    {
+      "success": true,
+      "engine_used": "tavily",
+      "fallback_count": 0,
+      "duration": 0.811,
+      "credits_used": 1,
+      "results_count": 3,
+      "has_answer": true,
+      "quality": 3,
+      "attempts": [
+        {
+          "engine": "tavily",
+          "success": true,
+          "duration": 0.811,
+          "credits_used": 1,
+          "results_count": 3,
+          "has_answer": true,
+          "quality": 3
+        }
+      ],
+      "query_id": "news_1",
+      "category": "news",
+      "query": "latest AI regulation news 2026",
+      "best_engine": "brave"
+    },
+    {
+      "success": true,
+      "engine_used": "tavily",
+      "fallback_count": 0,
+      "duration": 0.754,
+      "credits_used": 1,
+      "results_count": 4,
+      "has_answer": true,
+      "quality": 3,
+      "attempts": [
+        {
+          "engine": "tavily",
+          "success": true,
+          "duration": 0.754,
+          "credits_used": 1,
+          "results_count": 4,
+          "has_answer": true,
+          "quality": 3
+        }
+      ],
+      "query_id": "realtime_1",
+      "category": "realtime",
+      "query": "Sydney weather forecast tomorrow",
+      "best_engine": "brave"
+    },
+    {
+      "success": true,
+      "engine_used": "tavily",
+      "fallback_count": 0,
+      "duration": 1.001,
+      "credits_used": 1,
+      "results_count": 5,
+      "has_answer": true,
+      "quality": 4,
+      "attempts": [
+        {
+          "engine": "tavily",
+          "success": true,
+          "duration": 1.001,
+          "credits_used": 1,
+          "results_count": 5,
+          "has_answer": true,
+          "quality": 4
+        }
+      ],
+      "query_id": "academic_1",
+      "category": "academic",
+      "query": "LLM reasoning chain of thought papers",
+      "best_engine": "tavily"
+    },
+    {
+      "success": true,
+      "engine_used": "tavily",
+      "fallback_count": 0,
+      "duration": 0.775,
+      "credits_used": 1,
+      "results_count": 4,
+      "has_answer": true,
+      "quality": 4,
+      "attempts": [
+        {
+          "engine": "tavily",
+          "success": true,
+          "duration": 0.775,
+          "credits_used": 1,
+          "results_count": 4,
+          "has_answer": true,
+          "quality": 4
+        }
+      ],
+      "query_id": "product_1",
+      "category": "product",
+      "query": "best noise cancelling headphones review",
+      "best_engine": "brave"
+    }
+  ]
+}
